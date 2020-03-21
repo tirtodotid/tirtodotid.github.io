@@ -685,7 +685,7 @@ function colorCluster(){
 					 .append("svg")
 					 .style("z-index", "0")
 					 .style("width", "120px")
-					 .style("height","300px")
+					 .style("height","325px")
 		       .selectAll("g")
 		       .data(data.id)
 		       .enter()
