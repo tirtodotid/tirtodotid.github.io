@@ -43,8 +43,8 @@ var url = "https://louislugas.github.io/covid_19_cluster/json/kasus-corona-indon
 
 function forceNormal() {
 	simulation.force("center")
-		.x(width * forceProperties.center.x)
-		.y(height * forceProperties.center.y+50);
+		.x(width * forceProperties.center.x+70)
+		.y(height * forceProperties.center.y+200);
 	simulation.force("charge")
 		.strength(forceProperties.charge.strength * forceProperties.charge.enabled)
 		.distanceMin(forceProperties.charge.distanceMin)
@@ -75,7 +75,7 @@ function forceNormal() {
 function forceCluster() {
 
 	//width divider
-	var div = Math.max.apply(Math,graph.nodes.map(function(d){return d.klasterid;}));
+	var div = Math.max.apply(Math,graph.nodes.map(function(d){return d.provinsiid;}));
 	console.log(div);
 	console.log(width);
 	var scale = width/div/1.5;
@@ -90,8 +90,8 @@ function forceCluster() {
 	  .range(arrrange)
 
 	simulation.force("center")
-		.x(width * forceProperties.center.x)
-		.y(height * forceProperties.center.y+50);
+		.x(width * forceProperties.center.x+55)
+		.y(height * forceProperties.center.y+200);
 	simulation.force("charge")
 		.strength(-150)
 		.distanceMin(forceProperties.charge.distanceMin)
@@ -105,7 +105,7 @@ function forceCluster() {
 		.x(height * forceProperties.forceX.x);
 	simulation.force("forceY")
 		.strength(0.9)
-		.y(function(d){ return scaleCat(d.klasterid) } );
+		.y(function(d){ return scaleCat(d.provinsiid) } );
 	simulation.force("link")
 		.id(function(d) { return d.id ;})
 		.distance(forceProperties.link.distance)
@@ -137,8 +137,8 @@ function forceAge() {
 	  .range(arrrange)
 
 	simulation.force("center")
-		.x(width * forceProperties.center.x)
-		.y(height * forceProperties.center.y+50);
+		.x(width * forceProperties.center.x+60)
+		.y(height * forceProperties.center.y+150);
 	simulation.force("charge")
 		.strength(-150)
 		.distanceMin(forceProperties.charge.distanceMin)
@@ -184,8 +184,8 @@ function forceGender() {
 	  .range(arrrange)
 
 	simulation.force("center")
-		.x(width * forceProperties.center.x)
-		.y(height * forceProperties.center.y+50);
+		.x(width * forceProperties.center.x+50)
+		.y(height * forceProperties.center.y+100);
 	simulation.force("charge")
 		.strength(-150)
 		.distanceMin(forceProperties.charge.distanceMin)
@@ -231,8 +231,8 @@ function forceStatus() {
 	  .range(arrrange)
 
 	simulation.force("center")
-		.x(width * forceProperties.center.x)
-		.y(height * forceProperties.center.y+50);
+		.x(width * forceProperties.center.x+55)
+		.y(height * forceProperties.center.y+70);
 	simulation.force("charge")
 		.strength(-150)
 		.distanceMin(forceProperties.charge.distanceMin)
@@ -278,8 +278,8 @@ function forceNational() {
 	  .range(arrrange)
 
 	simulation.force("center")
-		.x(width * forceProperties.center.x)
-		.y(height * forceProperties.center.y);
+		.x(width * forceProperties.center.x+55)
+		.y(height * forceProperties.center.y+50);
 	simulation.force("charge")
 		.strength(-150)
 		.distanceMin(forceProperties.charge.distanceMin)
@@ -325,7 +325,7 @@ function forceHospital() {
 	  .range(arrrange)
 
 	simulation.force("center")
-		.x(width * forceProperties.center.x)
+		.x(width * forceProperties.center.x+50)
 		.y(height * forceProperties.center.y+150);
 	simulation.force("charge")
 		.strength(-150)
@@ -540,7 +540,7 @@ function initializeDisplay() {
 //CHANGE DISPLAY SCALE
 function initialScale() {
 
-	var scale = "translate(50,50), scale(.8,.8)";
+	var scale = "translate(50,50), scale(.6,.6)";
 	console.log(scale);
 
 	node
@@ -647,9 +647,18 @@ function updateDisplay() {
 //COLOR BY CLUSTER
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 function colorCluster(){
+
+	var data = {"klaster":["DKI Jakarta","Jawa Barat","Banten","Jawa Tengah","Jawa Timur","DI Yogyakarta","Bali","Kepulauan Riau","Lampung","Riau","Sumatera Utara","Kalimantan Barat","Kalimantan Timur","Sulawesi Utara","Sulawesi Selatan","Sulawesi Tenggara","Tidak diketahui"],
+	 "id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]};
+	console.log(data);
+
+	var color = d3.scaleLinear()
+		.range(["#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", "#98df8a", "#d62728", "#ff9896","#9467bd", "#c5b0d5", "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"])
+		.domain(data.id);
+
 	node
 		.attr("r", radius)
-		.style("fill", function(d) {return warna( d.klasterid );})
+		.style("fill", function(d) {return color( d.provinsiid );})
 		.style("stroke", "white")
 		.style("stroke-width", 3);
 
@@ -661,14 +670,6 @@ function colorCluster(){
 	       // update visibility
 	       isLegendHidden = !isLegendHidden;
 	       var visibility = (isLegendHidden) ? "hidden" : "visible";
-
-				 var data = {"klaster":["Jakarta","Diamond Princess","Kasus Impor","Jakarta-Impor","Subklaster 3","Subklaster 1","Subklaster 20","Tidak Diketahui","Istana Negara"],
-				 	"id":[1,2,3,4,5,6,7,8,9]};
-		     console.log(data);
-
-		     var color = d3.scaleLinear()
-		       .range(d3.schemeCategory10)
-		       .domain(data.id);
 
 	       // load legend content (if it changes based on node)
 				 // Modified Legend Code from Mike Bostock: http://bl.ocks.org/mbostock/3888852
@@ -684,7 +685,7 @@ function colorCluster(){
 					 .append("svg")
 					 .style("z-index", "0")
 					 .style("width", "120px")
-					 .style("height","180px")
+					 .style("height","300px")
 		       .selectAll("g")
 		       .data(data.id)
 		       .enter()
@@ -1184,13 +1185,13 @@ function clickNode(node) {
       htmlContent += "<h4>Kasus #" + node.id + "<\/h4>"
       htmlContent += "<table>"
       htmlContent += "<tr><td width=\"30%\">Jenis Kelamin: <\/td> <td><strong>" + node.gender +"<\/strong><\/td><\/tr>"
-      htmlContent += "<tr><td width=\"30%\">Umur: <\/td> <td><strong>" + node.umurtext +"<\/strong><\/td><\/tr>"
+      htmlContent += "<tr><td width=\"30%\">Umur: <\/td> <td><strong>" + node.umur +" tahun <\/strong><\/td><\/tr>"
 			htmlContent += "<tr><td width=\"30%\">Status: <\/td> <td><strong>" + node.status +"<\/strong><\/td><\/tr>"
 			htmlContent += "<tr><td width=\"30%\">Rumah Sakit: <\/td> <td><strong>" + node.rs +"<\/strong><\/td><\/tr>"
 			htmlContent += "<tr><td width=\"30%\">Kewarganegaraan: <\/td> <td><strong>" + node.wn +"<\/strong><\/td><\/tr>"
       htmlContent += "<tr><td width=\"30%\">Tanggal Pengumuman: <\/td> <td><strong>" + node.pengumuman +"<\/strong><\/td><\/tr>"
       htmlContent += "<tr><td width=\"30%\">Asal Penularan: <\/td> <td><strong>" + node.penularan +"<\/strong><\/td><\/tr>"
-      htmlContent += "<tr><td width=\"30%\">Klaster <\/td> <td><strong>" + node.klaster +"<\/strong><\/td><\/tr>"
+      htmlContent += "<tr><td width=\"30%\">Provinsi <\/td> <td><strong>" + node.provinsi +"<\/strong><\/td><\/tr>"
       tooltip.html(htmlContent);
   };
 
