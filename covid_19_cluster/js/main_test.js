@@ -1185,7 +1185,7 @@ function clickNode(node) {
       htmlContent += "<h4>Kasus #" + node.id + "<\/h4>"
       htmlContent += "<table>"
       htmlContent += "<tr><td width=\"30%\">Jenis Kelamin: <\/td> <td><strong>" + node.gender +"<\/strong><\/td><\/tr>"
-      htmlContent += "<tr><td width=\"30%\">Umur: <\/td> <td><strong>" + node.umur +" tahun <\/strong><\/td><\/tr>"
+      htmlContent += "<tr><td width=\"30%\">Umur: <\/td> <td><strong>" + node.umurtext +"<\/strong><\/td><\/tr>"
 			htmlContent += "<tr><td width=\"30%\">Status: <\/td> <td><strong>" + node.status +"<\/strong><\/td><\/tr>"
 			htmlContent += "<tr><td width=\"30%\">Rumah Sakit: <\/td> <td><strong>" + node.rs +"<\/strong><\/td><\/tr>"
 			htmlContent += "<tr><td width=\"30%\">Kewarganegaraan: <\/td> <td><strong>" + node.wn +"<\/strong><\/td><\/tr>"
