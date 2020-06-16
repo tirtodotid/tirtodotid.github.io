@@ -33,6 +33,7 @@ $button.on('click', function() {
     $t1.addClass('animate');
     $t2.addClass('animate');
     $button.css('opacity',0);
+    $button.css('pointer-events','none');
     //$replay.css('opacity',1);
 
 setTimeout(function() {
