@@ -47,7 +47,7 @@ setTimeout(function() {
         $next.css('opacity',0.25);
         $prev.css('transition','1s');
         $prev.css('opacity', 0.25);
-    },26000)
+    },23000)
 
     // automatic slide awal
     initialslide();
@@ -68,7 +68,7 @@ function initialslide() {
         $l2 = $l2 - slide;
         $l3 = $l3 - slide;
         page++;
-    }, 26000);
+    }, 23000);
 }
 
 function slidenext() {
@@ -178,7 +178,7 @@ $button.on('click', function() {
         .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)')
         .ease(d3.easeExp)
         .style('opacity' , 1)
-        .delay((Math.random() * 5000) + 15500);
+        .delay((Math.random() * 5000) + 14500);
     });
 
     var bodyperson = svgperson.selectAll('path')
