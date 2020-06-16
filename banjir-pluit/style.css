@@ -531,15 +531,15 @@ h3{
 }
 
 #bc-1 {
-    opacity: 1;
+    opacity: 0;
 }
 
 #bc-2 {
-    opacity: 1;
+    opacity: 0;
 }
 
 #bc-3 {
-    opacity: 1;
+    opacity: 0;
 }
 
 .jawaban {
@@ -547,18 +547,17 @@ h3{
     font-family: 'Lato', sans-serif;
     color: white;
     left:56px;
+    pointer-events: none;
 }
 
 .jawaban h1 {
     font-weight: 900;
     margin-bottom: 5px;
-    pointer-events: none;
 }
 
 #j1 {
     top:460px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j1 h1 {
@@ -568,7 +567,6 @@ h3{
 #j2 {
     top: 540px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j2 h1 {
@@ -578,7 +576,6 @@ h3{
 #j3 {
     top:460px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j3 h1 {
@@ -588,7 +585,6 @@ h3{
 #j4 {
     top: 540px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j4 h1 {
@@ -598,7 +594,6 @@ h3{
 #j5 {
     top:620px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j5 h1 {
@@ -608,7 +603,6 @@ h3{
 #j6 {
     top: 700px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j6 h1 {
@@ -618,7 +612,6 @@ h3{
 #j7 {
     top:460px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j7 h1 {
@@ -628,7 +621,6 @@ h3{
 #j8 {
     top: 540px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j8 h1 {
@@ -638,7 +630,6 @@ h3{
 #j9 {
     top:620px;
     opacity: 0;
-    pointer-events: none;
 }
 
 #j9 h1 {
