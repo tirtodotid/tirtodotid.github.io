@@ -33,7 +33,6 @@ $button.on('click', function() {
     $t1.addClass('animate');
     $t2.addClass('animate');
     $button.css('opacity',0);
-    console.log(page);
     //$replay.css('opacity',1);
 
 setTimeout(function() {
@@ -68,7 +67,6 @@ function initialslide() {
         $l2 = $l2 - slide;
         $l3 = $l3 - slide;
         page++;
-        console.log(page);
     }, 26000);
 }
 
@@ -86,7 +84,6 @@ function slidenext() {
     $l2 = $l2 - slide;
     $l3 = $l3 - slide;
     page++;
-    console.log(page);
 }
 
 function slideprev() {
@@ -103,7 +100,6 @@ function slideprev() {
     $l2 = $l2 + slide;
     $l3 = $l3 + slide;
     page--;
-    console.log(page);
 }
 
 $next.on('click',function(){
