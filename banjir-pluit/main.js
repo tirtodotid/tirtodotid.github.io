@@ -171,6 +171,7 @@ $button.on('click', function() {
         .append('svg')
         .attr('width', width)
         .attr('height',height)
+        .style.webkitTransform = 'translate(180,275) scale(0.01)'
         .style('-webkit-transform', 'translate(180,275) scale(0.01)') //start x 180 y 275 | end x 300 y 520
         .attr('transform', 'translate(180,275) scale(0.01)') //start x 180 y 275 | end x 300 y 520
         .style('position', 'absolute')
@@ -183,6 +184,7 @@ $button.on('click', function() {
         .raise()
         .transition()
         .duration((Math.random() * 1000) + 3000)
+        .style.webkitTransform = 'translate('+ posx +','+ posy +') scale(0.15)'
         .style('-webkit-transform', 'translate('+ posx +','+ posy +') scale(0.15)')
         .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)')
         .ease(d3.easeExp)
