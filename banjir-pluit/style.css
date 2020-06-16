@@ -552,6 +552,7 @@ h3{
 .jawaban h1 {
     font-weight: 900;
     margin-bottom: 5px;
+    pointer-events: none;
 }
 
 #j1 {
