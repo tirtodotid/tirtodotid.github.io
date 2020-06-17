@@ -174,7 +174,7 @@ $button.on('click', function() {
         .style('position', 'absolute')
         .style('stroke', '#262626')
         .style('stroke-width', 2)
-        .style('opacity', 0).
+        .style('opacity', 0)
         .append('g')
         .attr('transform', 'translate(180,275) scale(0.01)'); //start x 180 y 275 | end x 300 y 520
 
