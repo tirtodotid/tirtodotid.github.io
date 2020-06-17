@@ -186,7 +186,6 @@ $button.on('click', function() {
         .ease(d3.easeExp)
         .style('opacity' , 1)
         .delay((Math.random() * 5000) + 14500)
-        .append('g')
         .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)');
     });
 
