@@ -1,9 +1,11 @@
 var $button = $('#button');
+var $tebak = $('#tebak');
 var $jakarta = $('.jakarta');
 var $pluit = $('.pluit');
 var $j17 = $('.j17');
 var $pluitxt = $('.pluit-text');
 var $map = $('.map');
+var $map1 = $('.map1');
 var $mappluit = $('.mappluit');
 var $replay = $('#replay');
 var $t1 = $('.text-1');
@@ -12,10 +14,12 @@ var $next = $('.next');
 var $prev = $('.previous');
 var page = 1;
 var $s0 = $('#slide-0');
+var $st = $('#slide-tebak');
 var $s1 = $('#slide-1');
 var $s2 = $('#slide-2');
 var $s3 = $('#slide-3');
 var $l0 = parseInt($s0.css('left'), 10);
+var $lt = parseInt($st.css('left'), 10);
 var $l1 = parseInt($s1.css('left'), 10);
 var $l2 = parseInt($s2.css('left'), 10);
 var $l3 = parseInt($s3.css('left'), 10);
@@ -39,6 +43,9 @@ $button.on('click', function() {
     $t2.addClass('animate');
     $button.css('opacity',0);
     $button.css('pointer-events','none');
+    $map1.css('transition', '3s');
+    $map1.css('transition-timing-function', 'ease-in-out')
+    $map1.css('opacity', 0);
 
     //$replay.css('opacity',1);
 
@@ -49,20 +56,21 @@ setTimeout(function() {
 
     // tombol next & previous
     setTimeout(function() {
-        $next.css('transition','1s');
-        $next.css('opacity',0.25);
         $prev.css('transition','1s');
         $prev.css('opacity', 0.25);
     },23000)
 
     // automatic slide awal
     initialslide();
+
 });
 
 function initialslide() {
     setTimeout(function() {
         $s0.css('transition',slideduration);
         $s0.css('left', + ( $l0 - slide ) + 'px');
+        $st.css('transition',slideduration)
+        $st.css('left', + ( $lt - slide ) + 'px');
         $s1.css('transition',slideduration)
         $s1.css('left', + ( $l1 - slide ) + 'px');
         $s2.css('transition',slideduration)
@@ -70,10 +78,12 @@ function initialslide() {
         $s3.css('transition',slideduration)
         $s3.css('left', + ( $l3 - slide ) + 'px');
         $l0 = $l0 - slide;
+        $lt = $lt - slide;
         $l1 = $l1 - slide;
         $l2 = $l2 - slide;
         $l3 = $l3 - slide;
         page++;
+
 
     }, 23000);
 }
@@ -81,6 +91,8 @@ function initialslide() {
 function slidenext() {
     $s0.css('transition',slideduration);
     $s0.css('left', + ( $l0 - slide ) + 'px');
+    $st.css('transition',slideduration)
+    $st.css('left', + ( $lt - slide ) + 'px');
     $s1.css('transition',slideduration);
     $s1.css('left', + ( $l1 - slide ) + 'px');
     $s2.css('transition',slideduration);
@@ -88,16 +100,20 @@ function slidenext() {
     $s3.css('transition',slideduration);
     $s3.css('left', + ( $l3 - slide ) + 'px');
     $l0 = $l0 - slide;
+    $lt = $lt - slide;
     $l1 = $l1 - slide;
     $l2 = $l2 - slide;
     $l3 = $l3 - slide;
     page++;
+
 
 }
 
 function slideprev() {
     $s0.css('transition',slideduration);
     $s0.css('left', + ( $l0 + slide ) + 'px');
+    $s0.css('transition',slideduration);
+    $st.css('left', + ( $lt + slide ) + 'px');
     $s1.css('transition',slideduration);
     $s1.css('left', + ( $l1 + slide ) + 'px');
     $s2.css('transition','1s');
@@ -105,12 +121,20 @@ function slideprev() {
     $s3.css('transition',slideduration);
     $s3.css('left', + ( $l3 + slide ) + 'px');
     $l0 = $l0 + slide;
+    $lt = $lt + slide;
     $l1 = $l1 + slide;
     $l2 = $l2 + slide;
     $l3 = $l3 + slide;
     page--;
 
+
 }
+
+$tebak.on('click', function() {
+    slidenext();
+
+    $next.css('opacity', 0.25);
+})
 
 $next.on('click',function(){
     if ( page == 1 ) { // halaman 1
@@ -122,15 +146,20 @@ $next.on('click',function(){
 
     } else if ( page == 3 ) { // halaman 3
         slidenext();
-        $next.css('opacity', 0);
 
+    } else if ( page == 4 ) { // halaman 4
+        slidenext();
+        $next.css('opacity', 0);
     }
 })
 
 $prev.on('click',function(){
-    if ( page == 4 ) { // halaman 4
+    if ( page == 5 ) { // halaman 5
         slideprev();
         $next.css('opacity', 0.25);
+
+    } else if ( page == 4 ) { // halaman 4
+        slideprev();
 
     } else if ( page == 3 ) { // halaman 3
         slideprev();
@@ -138,7 +167,6 @@ $prev.on('click',function(){
     } else if ( page == 2 ) { // halaman 2
         slideprev();
         $prev.css('opacity', 0);
-
     }
 })
 
@@ -162,23 +190,25 @@ $button.on('click', function() {
 
     var angle = Math.random()*Math.PI*2;
 
-    var radius = Math.random()*120;
+    var radius = Math.random()*115;
 
-    var posx = Math.cos(angle)*radius + 300;
-    var posy = Math.sin(angle)*radius + 520;
+    var posx = Math.cos(angle)*radius + 390;
+    var posy = Math.sin(angle)*radius + 600;
 
     var svgperson = d3.select('#slide-0')
         .append('svg')
-        .attr('width', width)
-        .attr('height',height)
+        .attr('width', 560)
+        .attr('height',850)
         .style('position', 'absolute')
+
+    var g1 = svgperson
+        .append('g')
         .style('stroke', '#262626')
         .style('stroke-width', 2)
         .style('opacity', 0)
-        .append('g')
-        .attr('transform', 'translate(180,275) scale(0.01)'); //start x 180 y 275 | end x 300 y 520
+        .attr('transform', 'translate(280,240) scale(0.01)'); //start x 180 y 275 | end x 300 y 520
 
-    svgperson.each(function(){
+    g1.each(function(){
         d3.select(this)
         .raise()
         .transition()
@@ -189,14 +219,14 @@ $button.on('click', function() {
         .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)');
     });
 
-    var bodyperson = svgperson.selectAll('path')
+    var bodyperson = g1.selectAll('path')
         .data(person)
         .enter()
         .append('path')
         .attr('d', d => d.d )
         .style('fill', d => d.fill );
 
-    var headperson = svgperson.selectAll('circle')
+    var headperson = g1.selectAll('circle')
         .data(person)
         .enter()
         .append('circle')
@@ -211,8 +241,9 @@ $button.on('click', function() {
 
 //slider value
 var w = 448;
-var wplus = 500;
+var wplus = 560;
 var h = 150;
+var hplus = 850;
 
 var $persen1 = $('#persen-1');
 var $persen2 = $('#persen-2');
@@ -304,21 +335,21 @@ $persen3.on('change', function() {
 var svgslide = d3.select('#slide-1')
     .append('svg')
     .attr('width', wplus)
-    .attr('height', h)
+    .attr('height', hplus)
     .append('g')
     .attr('transform', 'translate(30,320)');
 
 var svgslide2 = d3.select('#slide-2')
     .append('svg')
     .attr('width', wplus)
-    .attr('height', h)
+    .attr('height', hplus)
     .append('g')
     .attr('transform', 'translate(30,320)');
 
 var svgslide3 = d3.select('#slide-3')
     .append('svg')
     .attr('width', wplus)
-    .attr('height', h)
+    .attr('height', hplus)
     .append('g')
     .attr('transform', 'translate(30,320)');
 
@@ -338,8 +369,8 @@ var line2 = svgslide2
     .style('stroke', 'orange')
     .style('stroke-width', 2)
     .style('stroke-dasharray', 6)
-    .attr('x1', val1)
-    .attr('x2', val1)
+    .attr('x1', val2)
+    .attr('x2', val2)
     .attr('y1', 20)
     .attr('y2', h -7.5)
 
@@ -348,8 +379,8 @@ var line3 = svgslide3
     .style('stroke', 'orange')
     .style('stroke-width', 2)
     .style('stroke-dasharray', 6)
-    .attr('x1', val1)
-    .attr('x2', val1)
+    .attr('x1', val3)
+    .attr('x2', val3)
     .attr('y1', 20)
     .attr('y2', h -7.5)
 
@@ -366,7 +397,7 @@ var textpersen1 = svgslide
 var textpersen2 = svgslide2
     .append('text')
     .attr('class','txtpersen')
-    .attr('x', val1)
+    .attr('x', val2)
     .attr('y', 14)
     .text(v +'%')
     .style('fill', 'white')
@@ -375,7 +406,7 @@ var textpersen2 = svgslide2
 var textpersen3 = svgslide3
     .append('text')
     .attr('class','txtpersen')
-    .attr('x', val1)
+    .attr('x', val3)
     .attr('y', 14)
     .text(v +'%')
     .style('fill', 'white')
@@ -399,21 +430,19 @@ var rect1 = svgslide
     .lower()
     .style('fill', 'orangered')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', ( w - 15 ) * 0)
     .style('opacity', 0.8)
-    .append('g')
-    .attr('transform', 'translate(26,25)')
+    .attr('transform', 'translate(33.5,25)')
 
-var w1 = (w*0.855+26);
+var w1 = ((w - 15) * 0.855 + 33.5);
 
 var rect2 = svgslide
     .append('rect')
     .lower()
     .style('fill', 'darkorange')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', ( w - 15 ) * 0)
     .style('opacity', 0.8)
-    .append('g')
     .attr('transform', 'translate(' + w1 + ',25)')
 
 
@@ -433,7 +462,7 @@ $bc1.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.855)
+            .attr('width', ( w - 15 ) * 0.855)
     },0);
     setTimeout(function() {
         $j2.css('opacity', 1);
@@ -443,7 +472,7 @@ $bc1.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.145)
+            .attr('width', ( w - 15 ) * 0.145)
     },2500);
     setTimeout(function() {
         slidenext()
@@ -456,45 +485,41 @@ var rect3 = svgslide2
     .lower()
     .style('fill', 'orangered')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .append('g')
-    .attr('transform', 'translate(26,25)')
+    .attr('transform', 'translate(33.5,25)')
 
-var w2 = (w*0.14+26);
+var w2 = ((w-15)*0.14+33.5);
 
 var rect4 = svgslide2
     .append('rect')
     .lower()
     .style('fill', 'darkorange')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .append('g')
     .attr('transform', 'translate(' + w2 + ',25)')
 
-var w3 = (w*0.684+26);
+var w3 = ((w-15)*0.684+33.5);
 
 var rect5 = svgslide2
     .append('rect')
     .lower()
     .style('fill', 'orange')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .append('g')
     .attr('transform', 'translate(' + w3 + ',25)')
 
-var w4 = (w*0.889+26);
+var w4 = ((w-15)*0.889+33.5);
 
 var rect6 = svgslide2
     .append('rect')
     .lower()
     .style('fill', 'lightsalmon')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .append('g')
     .attr('transform', 'translate(' + w4 + ',25)')
 
 
@@ -515,7 +540,7 @@ $bc2.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.14)
+            .attr('width', (w-15) * 0.14)
     },0);
     setTimeout(function() {
         $j4.css('opacity', 1);
@@ -525,7 +550,7 @@ $bc2.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.544)
+            .attr('width', (w-15) * 0.544)
     },2500);
     setTimeout(function() {
         $j5.css('opacity', 1);
@@ -535,7 +560,7 @@ $bc2.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.205)
+            .attr('width', (w-15) * 0.205)
     }, 5000);
     setTimeout(function() {
         $j6.css('opacity', 1);
@@ -545,7 +570,7 @@ $bc2.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.111)
+            .attr('width', (w-15) * 0.111)
     }, 7500);
     setTimeout(function() {
         slidenext()
@@ -559,33 +584,30 @@ var rect7 = svgslide3
     .lower()
     .style('fill', 'orangered')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .append('g')
-    .attr('transform', 'translate(26,25)')
+    .attr('transform', 'translate(33.5,25)')
 
-var w5 = (w*0.95+26);
+var w5 = ((w-15)*0.95+33.5);
 
 var rect8 = svgslide3
     .append('rect')
     .lower()
     .style('fill', 'darkorange')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .append('g')
     .attr('transform', 'translate(' + w5 + ',25)')
 
-var w6 = (w*0.99+26);
+var w6 = ((w-15)*0.99+33.5);
 
 var rect9 = svgslide3
     .append('rect')
     .lower()
     .style('fill', 'orange')
     .attr('height', h - 20)
-    .attr('width', w * 0)
+    .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .append('g')
     .attr('transform', 'translate(' + w6 + ',25)')
 
 
@@ -605,7 +627,7 @@ $bc3.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.95)
+            .attr('width', (w-15) * 0.95)
     },0);
     setTimeout(function() {
         $j8.css('opacity', 1);
@@ -615,7 +637,7 @@ $bc3.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.04)
+            .attr('width', (w-15) * 0.04)
     },2500);
     setTimeout(function() {
         $j9.css('opacity', 1);
@@ -625,6 +647,6 @@ $bc3.on('click', function() {
             .transition()
             .duration(1000)
             .ease(d3.easeCubic)
-            .attr('width', w * 0.01)
+            .attr('width', (w-15) * 0.01)
     },5000);
 })
