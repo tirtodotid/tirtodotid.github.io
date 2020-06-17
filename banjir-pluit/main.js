@@ -171,25 +171,23 @@ $button.on('click', function() {
         .append('svg')
         .attr('width', width)
         .attr('height',height)
-        .style.webkitTransform = 'translate(180,275) scale(0.01)'
-        .style('-webkit-transform', 'translate(180,275) scale(0.01)') //start x 180 y 275 | end x 300 y 520
-        .attr('transform', 'translate(180,275) scale(0.01)') //start x 180 y 275 | end x 300 y 520
         .style('position', 'absolute')
         .style('stroke', '#262626')
         .style('stroke-width', 2)
-        .style('opacity', 0);
+        .style('opacity', 0).
+        .append('g')
+        .attr('transform', 'translate(180,275) scale(0.01)'); //start x 180 y 275 | end x 300 y 520
 
     svgperson.each(function(){
         d3.select(this)
         .raise()
         .transition()
         .duration((Math.random() * 1000) + 3000)
-        .style.webkitTransform = 'translate('+ posx +','+ posy +') scale(0.15)'
-        .style('-webkit-transform', 'translate('+ posx +','+ posy +') scale(0.15)')
-        .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)')
         .ease(d3.easeExp)
         .style('opacity' , 1)
-        .delay((Math.random() * 5000) + 14500);
+        .delay((Math.random() * 5000) + 14500)
+        .append('g')
+        .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)');
     });
 
     var bodyperson = svgperson.selectAll('path')
@@ -308,21 +306,21 @@ var svgslide = d3.select('#slide-1')
     .append('svg')
     .attr('width', wplus)
     .attr('height', h)
-    .style('-webkit-transform', 'translate(30,320)')
+    .append('g')
     .attr('transform', 'translate(30,320)');
 
 var svgslide2 = d3.select('#slide-2')
     .append('svg')
     .attr('width', wplus)
     .attr('height', h)
-    .style('-webkit-transform', 'translate(30,320)')
+    .append('g')
     .attr('transform', 'translate(30,320)');
 
 var svgslide3 = d3.select('#slide-3')
     .append('svg')
     .attr('width', wplus)
     .attr('height', h)
-    .style('-webkit-transform', 'translate(30,320)')
+    .append('g')
     .attr('transform', 'translate(30,320)');
 
 // line slider
@@ -403,9 +401,9 @@ var rect1 = svgslide
     .style('fill', 'orangered')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(26,25)')
-    .attr('transform', 'translate(26,25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(26,25)')
 
 var w1 = (w*0.855+26);
 
@@ -415,9 +413,9 @@ var rect2 = svgslide
     .style('fill', 'darkorange')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(' + w1 + ',25)')
-    .attr('transform', 'translate(' + w1 + ',25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(' + w1 + ',25)')
 
 
 // Cek Jawaban 1
@@ -460,9 +458,9 @@ var rect3 = svgslide2
     .style('fill', 'orangered')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(26,25)')
-    .attr('transform', 'translate(26,25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(26,25)')
 
 var w2 = (w*0.14+26);
 
@@ -472,9 +470,9 @@ var rect4 = svgslide2
     .style('fill', 'darkorange')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(' + w2 + ',25)')
-    .attr('transform', 'translate(' + w2 + ',25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(' + w2 + ',25)')
 
 var w3 = (w*0.684+26);
 
@@ -484,9 +482,9 @@ var rect5 = svgslide2
     .style('fill', 'orange')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(' + w3 + ',25)')
-    .attr('transform', 'translate(' + w3 + ',25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(' + w3 + ',25)')
 
 var w4 = (w*0.889+26);
 
@@ -496,9 +494,10 @@ var rect6 = svgslide2
     .style('fill', 'lightsalmon')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(' + w4 + ',25)')
-    .attr('transform', 'translate(' + w4 + ',25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(' + w4 + ',25)')
+
 
 
 // Cek Jawaban 2
@@ -561,10 +560,10 @@ var rect7 = svgslide3
     .lower()
     .style('fill', 'orangered')
     .attr('height', h - 20)
-    .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(26,25)')
-    .attr('transform', 'translate(26,25)')
+    .attr('width', w * 0
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(26,25)')
 
 var w5 = (w*0.95+26);
 
@@ -574,9 +573,9 @@ var rect8 = svgslide3
     .style('fill', 'darkorange')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(' + w5 + ',25)')
-    .attr('transform', 'translate(' + w5 + ',25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(' + w5 + ',25)')
 
 var w6 = (w*0.99+26);
 
@@ -586,9 +585,9 @@ var rect9 = svgslide3
     .style('fill', 'orange')
     .attr('height', h - 20)
     .attr('width', w * 0)
-    .style('-webkit-transform', 'translate(' + w5 + ',25)')
-    .attr('transform', 'translate(' + w6 + ',25)')
     .style('opacity', 0.8)
+    .append('g')
+    .attr('transform', 'translate(' + w6 + ',25)')
 
 
 // Cek Jawaban 3
