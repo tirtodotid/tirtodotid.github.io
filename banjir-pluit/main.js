@@ -560,7 +560,7 @@ var rect7 = svgslide3
     .lower()
     .style('fill', 'orangered')
     .attr('height', h - 20)
-    .attr('width', w * 0
+    .attr('width', w * 0)
     .style('opacity', 0.8)
     .append('g')
     .attr('transform', 'translate(26,25)')
