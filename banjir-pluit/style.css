@@ -67,19 +67,24 @@
     left: 0px;
 }
 
-#slide-1 {
+#slide-tebak {
     background-color: #262626;
     left: 560px;
 }
 
-#slide-2 {
+#slide-1 {
     background-color: #262626;
     left: 1120px;
 }
 
+#slide-2 {
+    background-color: #262626;
+    left: 1680px;
+}
+
 #slide-3 {
     background-color: #262626;
-    left: 1680px;;
+    left: 2240px;
 }
 
 .orange {
@@ -89,7 +94,7 @@
 
 .mappluit {
     position: absolute;
-    top:178px;
+    top:108px;
     width:255px;
     left:94px;
     opacity:0;
@@ -106,7 +111,7 @@
 
 .map {
     position:absolute;
-    top:200px;
+    top:150px;
     left: 0px;
     z-index: 2;
     pointer-events: none;
@@ -123,8 +128,9 @@
 
 .j17 {
     position: absolute;
-    top:450px;
-    left: 220px;
+    top:380px;
+    left: 50%;
+    margin-left: -60px;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -142,7 +148,7 @@
 
 .pluit-text {
     position: absolute;
-    top:250px;
+    top:200px;
     left: 315px;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
@@ -174,6 +180,20 @@
     stroke-linejoin:round;
     stroke-dasharray:2050;
     stroke-dashoffset: 2050;
+    opacity: 0;
+}
+.map1{
+    position: absolute;
+    top:150px;
+    opacity: 1;
+}
+.jakarta1 {
+    position:absolute;
+    top: 150px;
+    fill: orangered;
+}
+
+.pluit1 {
     opacity: 0;
 }
 
@@ -209,13 +229,13 @@
 @keyframes map-pluit {
     0% {
         width: 690px;
-        top: 55px;
+        top: -85px;
         left: -55px;
         opacity:0;
     }
     100% {
         width: 690px;
-        top: 55px;
+        top: -85px;
         left: -55px;
         opacity:1;
     }
@@ -223,12 +243,12 @@
 
 @keyframes map-zoom {
     0% {
-        top:200px;
+        top:150px;
         left:0px;
         width: 560px;
     }
     100% {
-        top: 120px;
+        top: -20px;
         left: -300px;
         width: 1500px;
     }
@@ -252,6 +272,7 @@
 @keyframes pluit-text {
     0% {
         opacity: 0;
+        top: 200px;
         left: 315px;
     }
     16% {
@@ -259,30 +280,32 @@
     }
     32% {
         opacity: 1;
+        top: 200px;
         left: 315px;
     }
     100% {
         opacity: 1;
+        top: 110px;
         left: 410px;
     }
 }
 
 @keyframes jakarta-stroke {
     0% {
-        stroke-dashoffset: 6150;
+        stroke-dashoffset: 2050;
         opacity: 0;
     }
     40% {
         opacity:1;
     }
     55% {
-        stroke-dashoffset: 4100;
+        stroke-dashoffset: 0;
     }
     70% {
-        stroke-dashoffset:4100;
+        stroke-dashoffset:0;
     }
     100% {
-        stroke-dashoffset: 2050;
+        stroke-dashoffset: -2050;
         opacity: 1;
     }
 }
@@ -316,19 +339,44 @@
 }
 
 #button {
-    top: 425px;
-    background-color: orangered;
+    top: 380px;
+    /*background-color: orangered;*/
     position: absolute;
     left:50%;
     color: white;
-    margin-left: -52px;
+    margin-left: -81px;
     text-align: center;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+#tebak {
+    top: 380px;
+    /*background-color: orangered;*/
+    position: absolute;
+    left:50%;
+    color: white;
+    margin-left: -118.5px;
+    text-align: center;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
     cursor: pointer;
     z-index: 10;
     transition: 0.5s;
@@ -366,7 +414,7 @@ h3{
     font-size: 14px;
     position: absolute;
     left:30px;
-    top:430px;
+    top:330px;
     opacity: 0;
 }
 
@@ -637,10 +685,10 @@ h3{
 }
 
 .hiroshi {
-    width: 220px;
+    width: 240px;
     position: absolute;
-    top: 520px;
-    left: 50px;
+    top: 430px;
+    left: 35px;
     pointer-events: none;
     opacity: 0;
 }
