@@ -1,0 +1,136 @@
+.container {
+    width: 560px;
+    height: 600px;
+    background-color: #262626;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.logo {
+     width: 48px;
+     height: 60px;
+     /*background-color: aqua;*/
+     position: fixed;
+     top: 32px;
+     left:484px;
+     z-index: 5;
+}
+
+.title{
+    width: 340px;
+    height: 100px;
+    /*background-color: lightgoldenrodyellow;*/
+    position: fixed;
+    top: 25px;
+    left: 28px;
+    z-index: 5;
+    font-family: 'Staatliches', cursive;
+    font-size:12pt;
+    line-height: 1.7em;
+    font-kerning: none;
+    color:black;
+}
+
+.slide {
+    width: 560px;
+    position: absolute;
+}
+
+#slide-1 {
+    opacity: 1;
+}
+.tahun {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: 900;
+    font-size: 30pt;
+    position: absolute;
+    top: 460px;
+    left: 440px;
+    z-index: 5;
+    text-align: right;
+}
+
+.slide-tahun {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    position: absolute;
+    left: 28px;
+    z-index: 4;
+    top: 520px;
+    width: 90%;
+    height: 4px;
+    background: #262626;
+    border-radius: 10px;
+}
+
+.slide-tahun::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width:25px;
+    height:25px;
+    border-radius: 13px;
+    background: #2295D3;
+    cursor: pointer;
+}
+
+.slide-tahun::-moz-range-thumb {
+    appearance: none;
+    -moz-appearance: none;
+    width:25px;
+    height:25px;
+    border-radius: 13px;
+    background: #2295D3;
+    cursor: pointer;
+}
+
+.slide-tahun::-ms-thumb {
+    width:25px;
+    height:25px;
+    border-radius: 13px;
+    appearance: none;
+    background: #2295D3;
+    cursor: pointer;
+}
+
+.play {
+    background: #2295D3;
+    color: #262626;
+    border-radius: 15px;
+    position: absolute;
+    width:30px;
+    top: 480px;
+    left: 68px;
+    z-index:4;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.prev {
+    background: #2295D3;
+    color: #262626;
+    border-radius: 15px;
+    position: absolute;
+    width:30px;
+    top: 480px;
+    left: 28px;
+    z-index:4;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.next {
+    background: #2295D3;
+    color: #262626;
+    border-radius: 15px;
+    position: absolute;
+    width:30px;
+    top: 480px;
+    left: 108px;
+    z-index:4;
+    opacity: 0;
+    cursor: pointer;
+}
