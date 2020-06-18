@@ -17,12 +17,31 @@
      z-index: 5;
 }
 
+.source {
+    width: 100px;
+    height: 60px;
+    /*background: darkgreen;*/
+    position: fixed;
+    top:32px;
+    left: 372px;
+    text-align: right;
+    color: #2295D3;
+    font-family: 'Lato', sans-serif;
+    font-size: 9.5pt;
+    z-index: 5;
+}
+
+.credit {
+    line-height: 0.3em;
+    font-weight:900;
+}
+
 .title{
     width: 340px;
     height: 100px;
     /*background-color: lightgoldenrodyellow;*/
     position: fixed;
-    top: 25px;
+    top: 10px;
     left: 28px;
     z-index: 5;
     font-family: 'Staatliches', cursive;
