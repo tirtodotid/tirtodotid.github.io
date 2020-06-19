@@ -122,6 +122,8 @@
     position: absolute;
     mix-blend-mode: multiply;
     z-index: 3;
+    opacity: 0.8;
+    filter: brightness(0.8) contrast(1.4);
 }
 
 .jakarta-over {
