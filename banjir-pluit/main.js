@@ -56,13 +56,13 @@ $button.on('click', function() {
         $pluitxt.addClass('animate')
     },6500)
 
-    setTimeout(function() {
-        $map.addClass('animate')
-    },8000)
+    //setTimeout(function() {
+    //    $map.addClass('animate')
+    //},8000)
 
-    setTimeout(function() {
-        $mappluit.addClass('animate')
-    },11000)
+    //setTimeout(function() {
+    //   $mappluit.addClass('animate')
+    //},11000)
 
     setTimeout(function() {
         $t1.addClass('animate')
