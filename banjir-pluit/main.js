@@ -33,26 +33,51 @@ var $bc2 = $('#bc-2');
 var $bc3 = $('#bc-3');
 
 $button.on('click', function() {
-    $jakarta.addClass('animate');
-    $pluit.addClass('animate');
-    $j17.addClass('animate');
-    $pluitxt.addClass('animate');
-    $map.addClass('animate');
-    $mappluit.addClass('animate');
-    $t1.addClass('animate');
-    $t2.addClass('animate');
-    $button.css('opacity',0);
-    $button.css('pointer-events','none');
-    $map1.css('transition', '3s');
-    $map1.css('transition-timing-function', 'ease-in-out')
-    $map1.css('opacity', 0);
+
+    setTimeout(function() {
+        $button.css('opacity',0);
+        $button.css('pointer-events','none');
+        $map1.css('transition', '3s');
+        $map1.css('transition-timing-function', 'ease-in-out')
+        $map1.css('opacity', 0);
+
+        $j17.addClass('animate');
+    },0)
+
+    setTimeout(function() {
+        $jakarta.addClass('animate')
+    },1000)
+
+    setTimeout(function() {
+        $pluit.addClass('animate')
+    },5000)
+
+    setTimeout(function() {
+        $pluitxt.addClass('animate')
+    },6500)
+
+    setTimeout(function() {
+        $map.addClass('animate')
+    },8000)
+
+    setTimeout(function() {
+        $mappluit.addClass('animate')
+    },11000)
+
+    setTimeout(function() {
+        $t1.addClass('animate')
+    },12500)
 
     //$replay.css('opacity',1);
 
-setTimeout(function() {
-    $hiroshi.css('opacity', 2)
-    $hiroshi.css('transition', '1s')
-},14000)
+    setTimeout(function() {
+        $hiroshi.css('opacity', 2)
+        $hiroshi.css('transition', '1s')
+    },14000)
+
+    setTimeout(function() {
+        $t2.addClass('animate')
+    },17000)
 
     // tombol next & previous
     setTimeout(function() {
