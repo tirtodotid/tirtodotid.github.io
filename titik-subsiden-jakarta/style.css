@@ -1,0 +1,56 @@
+.logo {
+     width: 48px;
+     height: 60px;
+     position: fixed;
+     top: 32px;
+     right:28px;
+     z-index: 1000;
+}
+
+.title{
+    width: 340px;
+    height: 100px;
+    /*background-color: lightgoldenrodyellow;*/
+    position: fixed;
+    top: 0px;
+    left: 60px;
+    z-index: 1000;
+    color:white;
+}
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    font-size:30pt;
+    line-height: 0.9em;
+    font-kerning: none;
+    color: #262626;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size:10pt;
+    line-height: 1.2em;
+    font-kerning: none;
+    color: #262626;
+    margin-top: -18px;
+}
+
+.source {
+    width: 100px;
+    height: 60px;
+    /*background: darkgreen;*/
+    position: fixed;
+    top:32px;
+    right: 88px;
+    text-align: right;
+    color: #D40000;
+    font-family: 'Lato', sans-serif;
+    font-size: 9.5pt;
+    z-index: 5;
+}
+
+.credit {
+    line-height: 0.3em;
+    font-weight:900;
+}
