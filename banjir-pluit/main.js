@@ -32,13 +32,13 @@ var $bc1 = $('#bc-1');
 var $bc2 = $('#bc-2');
 var $bc3 = $('#bc-3');
 
+
 // variabel untuk d3
 var width = 200;
 var height = 200;
 
 var i;
 
-// variabel svg
 var person = [
     {
         fill: "white",
@@ -79,7 +79,7 @@ $button.on('click', function() {
     },8000)
 
     setTimeout(function() {
-       $mappluit.addClass('animate')
+        $mappluit.addClass('animate')
     },11000)
 
     setTimeout(function() {
@@ -102,57 +102,59 @@ $button.on('click', function() {
         $prev.css('transition','1s');
         $prev.css('opacity', 0.25);
     },23000)
-    
-    for ( i = 0; i <= 200; i++ ){
 
-    var angle = Math.random()*Math.PI*2;
+    setTimeout(function() {
+        for ( i = 0; i <= 200; i++ ){
 
-    var radius = Math.random()*115;
+        var angle = Math.random()*Math.PI*2;
 
-    var posx = Math.cos(angle)*radius + 390;
-    var posy = Math.sin(angle)*radius + 600;
+        var radius = Math.random()*115;
 
-    var svgperson = d3.select('#slide-0')
-        .append('svg')
-        .attr('width', 560)
-        .attr('height',850)
-        .style('position', 'absolute')
+        var posx = Math.cos(angle)*radius + 390;
+        var posy = Math.sin(angle)*radius + 600;
 
-    var g1 = svgperson
-        .append('g')
-        .style('stroke', '#262626')
-        .style('stroke-width', 2)
-        .style('opacity', 0)
-        .attr('transform', 'translate(280,240) scale(0.01)'); //start x 180 y 275 | end x 300 y 520
+        var svgperson = d3.select('#slide-0')
+            .append('svg')
+            .attr('width', 560)
+            .attr('height',850)
+            .style('position', 'absolute')
 
-    g1.each(function(){
-        d3.select(this)
-        .raise()
-        .transition()
-        .duration((Math.random() * 1000) + 3000)
-        .ease(d3.easeExp)
-        .style('opacity' , 1)
-        .delay((Math.random() * 5000) + 14500)
-        .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)');
-    });
+        var g1 = svgperson
+            .append('g')
+            .style('stroke', '#262626')
+            .style('stroke-width', 2)
+            .style('opacity', 0)
+            .attr('transform', 'translate(280,240) scale(0.01)'); //start x 180 y 275 | end x 300 y 520
 
-    var bodyperson = g1.selectAll('path')
-        .data(person)
-        .enter()
-        .append('path')
-        .attr('d', d => d.d )
-        .style('fill', d => d.fill );
+        g1.each(function(){
+            d3.select(this)
+            .raise()
+            .transition()
+            .duration((Math.random() * 4000) + 3000)
+            .ease(d3.easeExp)
+            .style('opacity' , 1)
+            .attr('transform', 'translate('+ posx +','+ posy +') scale(0.15)');
+        });
 
-    var headperson = g1.selectAll('circle')
-        .data(person)
-        .enter()
-        .append('circle')
-        .attr('r', d => d.r )
-        .attr('cx', d => d.cx )
-        .attr('cy', d => d.cy)
-        .style('fill', d => d.fill );
+        var bodyperson = g1.selectAll('path')
+            .data(person)
+            .enter()
+            .append('path')
+            .attr('d', d => d.d )
+            .style('fill', d => d.fill );
 
-    } //endforloop
+        var headperson = g1.selectAll('circle')
+            .data(person)
+            .enter()
+            .append('circle')
+            .attr('r', d => d.r )
+            .attr('cx', d => d.cx )
+            .attr('cy', d => d.cy)
+            .style('fill', d => d.fill );
+
+        } //endforloop
+    },14500)
+
 
     // automatic slide awal
     initialslide();
@@ -263,7 +265,6 @@ $prev.on('click',function(){
         $prev.css('opacity', 0);
     }
 })
-
 
 //slider value
 var w = 448;
