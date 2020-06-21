@@ -27,6 +27,11 @@ var slide = 560;
 var slideduration = '0.5s';
 var $hiroshi = $('.hiroshi');
 
+//=================================================================================
+
+
+//=================================================================================
+
 // variabel button cek jawaban
 var $bc1 = $('#bc-1');
 var $bc2 = $('#bc-2');
@@ -151,6 +156,7 @@ $button.on('click', function() {
             .attr('cx', d => d.cx )
             .attr('cy', d => d.cy)
             .style('fill', d => d.fill );
+
 
         } //endforloop
     },14500)
