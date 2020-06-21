@@ -50,6 +50,12 @@ var person = [
     }
 ]
 
+var svgperson = d3.select('#slide-0')
+    .append('svg')
+    .attr('width', 560)
+    .attr('height',850)
+    .style('position', 'absolute')
+
 $button.on('click', function() {
 
     setTimeout(function() {
@@ -104,7 +110,7 @@ $button.on('click', function() {
     },23000)
 
     setTimeout(function() {
-        for ( i = 0; i <= 100; i++ ){
+        for ( i = 0; i <= 200; i++ ){
 
         var angle = Math.random()*Math.PI*2;
 
@@ -112,12 +118,6 @@ $button.on('click', function() {
 
         var posx = Math.cos(angle)*radius + 390;
         var posy = Math.sin(angle)*radius + 600;
-
-        var svgperson = d3.select('#slide-0')
-            .append('svg')
-            .attr('width', 560)
-            .attr('height',850)
-            .style('position', 'absolute')
 
         var g1 = svgperson
             .append('g')
