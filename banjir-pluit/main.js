@@ -89,8 +89,8 @@ $button.on('click', function() {
     //$replay.css('opacity',1);
 
     setTimeout(function() {
-        //$hiroshi.css('opacity', 2)
-        //$hiroshi.css('transition', '1s')
+        $hiroshi.css('opacity', 2)
+        $hiroshi.css('transition', '1s')
     },14000)
 
     setTimeout(function() {
