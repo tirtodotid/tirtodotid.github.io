@@ -104,7 +104,7 @@ $button.on('click', function() {
     },23000)
 
     setTimeout(function() {
-        for ( i = 0; i <= 200; i++ ){
+        for ( i = 0; i <= 10; i++ ){
 
         var angle = Math.random()*Math.PI*2;
 
