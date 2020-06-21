@@ -175,6 +175,22 @@
     stroke-width:2.5;
     stroke-linecap:round;
     stroke-linejoin:round;
+    stroke-dasharray:2050;
+    stroke-dashoffset: 2050;
+    opacity: 0;
+}
+.map1{
+    position: absolute;
+    top:150px;
+    opacity: 1;
+}
+.jakarta1 {
+    position:absolute;
+    top: 150px;
+    fill: orangered;
+}
+
+.pluit1 {
     opacity: 0;
 }
 
@@ -192,7 +208,8 @@
     stroke-width:2.5;
     stroke-linecap:round;
     stroke-linejoin:round;
-    opacity: 0;
+    stroke-dasharray:300;
+    stroke-dashoffset: 300;
 
 }
 
@@ -295,7 +312,6 @@
     }
     25% {
         stroke-dashoffset: 0;
-        opacity: 1;
     }
     58% {
         stroke-width: 2.5;
