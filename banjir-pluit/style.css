@@ -283,12 +283,20 @@
 
 @keyframes jakarta-stroke {
     0% {
+        stroke-dashoffset: 6150;
         opacity: 0;
     }
     40% {
         opacity:1;
     }
+    55% {
+        stroke-dashoffset: 4100;
+    }
+    70% {
+        stroke-dashoffset:4100;
+    }
     100% {
+        stroke-dashoffset: 2050;
         opacity: 1;
     }
 }
@@ -296,12 +304,17 @@
 
 @keyframes pluit-stroke {
     0% {
+        stroke-dashoffset: 300;
+    }
+    25% {
+        stroke-dashoffset: 0;
     }
     58% {
         stroke-width: 2.5;
     }
     100% {
         stroke-width: 1;
+        stroke-dashoffset: 0;
     }
 }
 
