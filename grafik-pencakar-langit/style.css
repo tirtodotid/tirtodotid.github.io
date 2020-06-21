@@ -5,6 +5,7 @@
      top: 32px;
      right:28px;
      z-index: 1000;
+     pointer-events: none;
 }
 
 .title{
@@ -12,32 +13,25 @@
     height: 100px;
     /*background-color: lightgoldenrodyellow;*/
     position: fixed;
-    top: -20px;
-    left: 70px;
+    top: 0px;
+    left: 60px;
     z-index: 1000;
     color:white;
+    pointer-events: none;
 }
 
 h1 {
     font-family: 'Staatliches', cursive;
-    font-size:46pt;
+    font-size:24pt;
     line-height: 0.9em;
     font-kerning: none;
     color: #262626;
     margin-bottom: 0px;
-}
-
-p {
-    font-family: 'Lato', sans-serif;
-    font-size:10pt;
-    line-height: 1.2em;
-    font-kerning: none;
-    color: #262626;
-    margin-top: -18px;
+    pointer-events: none;
 }
 
 .source {
-    width: 150px;
+    width: 120px;
     height: 60px;
     /*background: darkgreen;*/
     position: fixed;
@@ -46,7 +40,7 @@ p {
     text-align: right;
     color: #D40000;
     font-family: 'Lato', sans-serif;
-    font-size: 9.5pt;
+    font-size: 8pt;
     z-index: 5;
 }
 
