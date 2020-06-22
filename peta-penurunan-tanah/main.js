@@ -203,26 +203,28 @@ $slide.on('input', function() {
     //console.log(val);
 })
 
-var width = $('.container').parent().width();
-
+var width = $slide.width();
+var width2 = $('.container').width()
 
 var svg = d3.select('.container')
     .append('svg')
-    .attr('width', width )
+    .attr('width', width2 )
     .attr('height', 850 )
     .attr('id', 'svg');
 
 var data = [0,10,20,28,53];
 
-var mul = ((width * 0.9 - 18) / 53);
+var selisih = (width2 - width) /2 ;
+
+var mul = ((width - 18) / 53);
 
 svg
     .selectAll('line')
     .data(data)
     .enter()
     .append('line')
-    .attr('x1', d => d * mul + 39)
-    .attr('x2', d => d * mul + 39)
+    .attr('x1', d => d * mul +39)
+    .attr('x2', d => d * mul +39)
     .attr('y1', 765 )
     .attr('y2', 785 )
     .style('stroke', 'black')
