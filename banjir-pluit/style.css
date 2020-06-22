@@ -700,14 +700,14 @@ h3{
 
     .text-1 {
         font-size:14pt;
-        top:50%;
-        width:60%;
+        top:40%;
+        width:80%;
     }
 
     .text-2 {
         font-size:14pt;
         top:80%;
-        left:60%;
+        left:50%;
     }
 
     .pluit-text {
@@ -723,7 +723,7 @@ h3{
     @keyframes pluit-text {
         0% {
             opacity: 0;
-            top:25%;
+            top:20%;
             left: 55%;
         }
         16% {
@@ -731,13 +731,13 @@ h3{
         }
         32% {
             opacity: 1;
-            top:25%;
+            top:20%;
             left: 55%;
         }
         100% {
             opacity: 1;
-            top: 25%;
-            left: 72%;
+            top: 20%;
+            left: 75%;
         }
     }
 
