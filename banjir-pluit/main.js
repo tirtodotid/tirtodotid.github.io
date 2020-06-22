@@ -23,9 +23,11 @@ var $lt = parseInt($st.css('left'), 10);
 var $l1 = parseInt($s1.css('left'), 10);
 var $l2 = parseInt($s2.css('left'), 10);
 var $l3 = parseInt($s3.css('left'), 10);
-var slide = 560;
+var slide = $('.container').parent().width();
+var vslide = $('.container').parent().height();
 var slideduration = '0.5s';
 var $hiroshi = $('.hiroshi');
+
 
 //=================================================================================
 
@@ -57,8 +59,8 @@ var person = [
 
 var svgperson = d3.select('#slide-0')
     .append('svg')
-    .attr('width', 560)
-    .attr('height',850)
+    .attr('width', '100%')
+    .attr('height','100%')
     .style('position', 'absolute')
 
 $button.on('click', function() {
@@ -119,17 +121,20 @@ $button.on('click', function() {
 
         var angle = Math.random()*Math.PI*2;
 
-        var radius = Math.random()*115;
+        var radius = Math.random()*60;
 
-        var posx = Math.cos(angle)*radius + 390;
-        var posy = Math.sin(angle)*radius + 600;
+        var posx = Math.cos(angle)*radius + (0.7 * slide);
+        var posy = Math.sin(angle)*radius + (0.7 * vslide );
+
+        var posx1 = Math.cos(angle)*radius + (0.5 * slide);
+        var posy1 = Math.sin(angle)*radius + (0.3 * vslide );
 
         var g1 = svgperson
             .append('g')
             .style('stroke', '#262626')
             .style('stroke-width', 2)
             .style('opacity', 0)
-            .attr('transform', 'translate(280,240) scale(0.01)'); //start x 180 y 275 | end x 300 y 520
+            .attr('transform', 'translate('+posx1+','+posy1+') scale(0.01)'); //start x 180 y 275 | end x 300 y 520
 
         g1.each(function(){
             d3.select(this)
@@ -273,18 +278,19 @@ $prev.on('click',function(){
 })
 
 //slider value
-var w = 448;
-var wplus = 560;
-var h = 150;
-var hplus = 850;
+var wplus = slide;
+var w = 0.8 * wplus;
+var hplus = vslide;
+var h = 0.25 * hplus;
+
 
 var $persen1 = $('#persen-1');
 var $persen2 = $('#persen-2');
 var $persen3 = $('#persen-3');
 
-var val1 = $persen1.val() * (w - 15) / 100 + 33.5;
-var val2 = $persen2.val() * (w - 15) / 100 + 33.5;
-var val3 = $persen3.val() * (w - 15) / 100 + 33.5;
+var val1 = $persen1.val() * (w - 15) / 100 + 9;
+var val2 = $persen2.val() * (w - 15) / 100 + 9;
+var val3 = $persen3.val() * (w - 15) / 100 + 9;
 
 var v = $persen1.val();
 var v2 = $persen2.val();
@@ -292,7 +298,7 @@ var v3 = $persen3.val();
 
 // on input slider 1
 $persen1.on('input', function() {
-    val1 = $persen1.val() * (w - 15)  / 100 + 33.5;
+    val1 = $persen1.val() * (w - 15)  / 100 + 9;
     v = $persen1.val();
 
     line1
@@ -317,7 +323,7 @@ $persen1.on('change', function() {
 
 // on input slider 2
 $persen2.on('input', function() {
-    val2 = $persen2.val() * (w - 15)  / 100 + 33.5;
+    val2 = $persen2.val() * (w - 15)  / 100 + 9;
     v2 = $persen2.val();
 
     line2
@@ -342,7 +348,7 @@ $persen2.on('change', function() {
 
 // on input slider 3
 $persen3.on('input', function() {
-    val3 = $persen3.val() * (w - 15)  / 100 + 33.5;
+    val3 = $persen3.val() * (w - 15)  / 100 + 9;
     v3 = $persen3.val();
 
     line3
@@ -365,26 +371,29 @@ $persen3.on('change', function() {
     $bc3.css('opacity',1)
 });
 
+var transx = 0.1 * wplus;
+var transy = 0.3 * hplus;
+
 var svgslide = d3.select('#slide-1')
     .append('svg')
     .attr('width', wplus)
     .attr('height', hplus)
     .append('g')
-    .attr('transform', 'translate(30,320)');
+    .attr('transform', 'translate('+transx+','+transy+')');
 
 var svgslide2 = d3.select('#slide-2')
     .append('svg')
     .attr('width', wplus)
     .attr('height', hplus)
     .append('g')
-    .attr('transform', 'translate(30,320)');
+    .attr('transform', 'translate('+transx+','+transy+')');
 
 var svgslide3 = d3.select('#slide-3')
     .append('svg')
     .attr('width', wplus)
     .attr('height', hplus)
     .append('g')
-    .attr('transform', 'translate(30,320)');
+    .attr('transform', 'translate('+transx+','+transy+')');
 
 // line slider
 var line1 = svgslide
@@ -394,8 +403,8 @@ var line1 = svgslide
     .style('stroke-dasharray', 6)
     .attr('x1', val1)
     .attr('x2', val1)
-    .attr('y1', 20)
-    .attr('y2', h -7.5)
+    .attr('y1', 0.2 * hplus)
+    .attr('y2', 0.12 * hplus)
 
 var line2 = svgslide2
     .append('line')
@@ -404,8 +413,8 @@ var line2 = svgslide2
     .style('stroke-dasharray', 6)
     .attr('x1', val2)
     .attr('x2', val2)
-    .attr('y1', 20)
-    .attr('y2', h -7.5)
+    .attr('y1', 0.2 * hplus)
+    .attr('y2', 0.12 * hplus)
 
 var line3 = svgslide3
     .append('line')
@@ -414,15 +423,15 @@ var line3 = svgslide3
     .style('stroke-dasharray', 6)
     .attr('x1', val3)
     .attr('x2', val3)
-    .attr('y1', 20)
-    .attr('y2', h -7.5)
+    .attr('y1', 0.2 * hplus)
+    .attr('y2', 0.12 * hplus)
 
 // text slider
 var textpersen1 = svgslide
     .append('text')
     .attr('class','txtpersen')
     .attr('x', val1)
-    .attr('y', 14)
+    .attr('y', 0.1 * hplus)
     .text(v +'%')
     .style('fill', 'white')
     .attr('text-anchor', 'middle')
@@ -431,7 +440,7 @@ var textpersen2 = svgslide2
     .append('text')
     .attr('class','txtpersen')
     .attr('x', val2)
-    .attr('y', 14)
+    .attr('y', 0.1 * hplus)
     .text(v +'%')
     .style('fill', 'white')
     .attr('text-anchor', 'middle')
@@ -440,7 +449,7 @@ var textpersen3 = svgslide3
     .append('text')
     .attr('class','txtpersen')
     .attr('x', val3)
-    .attr('y', 14)
+    .attr('y', 0.1 * hplus)
     .text(v +'%')
     .style('fill', 'white')
     .attr('text-anchor', 'middle')
@@ -457,26 +466,29 @@ var $j7 = $('#j7');
 var $j8 = $('#j8');
 var $j9 = $('#j9');
 
+var rx = 0.2 * wplus / 2;
+var ry = 0.12 * hplus;
+
 // grafik 1
 var rect1 = svgslide
     .append('rect')
     .lower()
     .style('fill', 'orangered')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', ( w - 15 ) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(33.5,25)')
+    .attr('transform', 'translate(9,'+ry+')')
 
-var w1 = ((w - 15) * 0.855 + 33.5);
+var w1 = ((w - 15) * 0.855 +9);
 
 var rect2 = svgslide
     .append('rect')
     .lower()
     .style('fill', 'darkorange')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', ( w - 15 ) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(' + w1 + ',25)')
+    .attr('transform', 'translate(' + w1 + ','+ry+')')
 
 
 // Cek Jawaban 1
@@ -517,43 +529,43 @@ var rect3 = svgslide2
     .append('rect')
     .lower()
     .style('fill', 'orangered')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(33.5,25)')
+    .attr('transform', 'translate(9,'+ry+')')
 
-var w2 = ((w-15)*0.14+33.5);
+var w2 = ((w-15)*0.14+9);
 
 var rect4 = svgslide2
     .append('rect')
     .lower()
     .style('fill', 'darkorange')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(' + w2 + ',25)')
+    .attr('transform', 'translate(' + w2 + ','+ry+')')
 
-var w3 = ((w-15)*0.684+33.5);
+var w3 = ((w-15)*0.684+9);
 
 var rect5 = svgslide2
     .append('rect')
     .lower()
     .style('fill', 'orange')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(' + w3 + ',25)')
+    .attr('transform', 'translate(' + w3 + ','+ry+')')
 
-var w4 = ((w-15)*0.889+33.5);
+var w4 = ((w-15)*0.889+9);
 
 var rect6 = svgslide2
     .append('rect')
     .lower()
     .style('fill', 'lightsalmon')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(' + w4 + ',25)')
+    .attr('transform', 'translate(' + w4 + ','+ry+')')
 
 
 
@@ -616,32 +628,32 @@ var rect7 = svgslide3
     .append('rect')
     .lower()
     .style('fill', 'orangered')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(33.5,25)')
+    .attr('transform', 'translate(9,'+ry+')')
 
-var w5 = ((w-15)*0.95+33.5);
+var w5 = ((w-15)*0.95+9);
 
 var rect8 = svgslide3
     .append('rect')
     .lower()
     .style('fill', 'darkorange')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(' + w5 + ',25)')
+    .attr('transform', 'translate(' + w5 + ','+ry+')')
 
-var w6 = ((w-15)*0.99+33.5);
+var w6 = ((w-15)*0.99+9);
 
 var rect9 = svgslide3
     .append('rect')
     .lower()
     .style('fill', 'orange')
-    .attr('height', h - 20)
+    .attr('height', 0.08 * hplus)
     .attr('width', (w-15) * 0)
     .style('opacity', 0.8)
-    .attr('transform', 'translate(' + w6 + ',25)')
+    .attr('transform', 'translate(' + w6 + ','+ry+')')
 
 
 // Cek Jawaban 3

@@ -1,9 +1,9 @@
 .container {
-    width: 560px;
-    height: 850px;
+    width: 100%;
+    height: 640px;
     background-color: #262626;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
 }
 
@@ -13,7 +13,7 @@
      /*background-color: aqua;*/
      position: fixed;
      top: 32px;
-     left:484px;
+     left:80%;
      z-index: 5;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .slide {
-    width: 560px;
+    width: 100%;
     height: 900px;
     position: absolute;
 }
@@ -69,22 +69,22 @@
 
 #slide-tebak {
     background-color: #262626;
-    left: 560px;
+    left: 100%;
 }
 
 #slide-1 {
     background-color: #262626;
-    left: 1120px;
+    left: 200%;
 }
 
 #slide-2 {
     background-color: #262626;
-    left: 1680px;
+    left: 300%;
 }
 
 #slide-3 {
     background-color: #262626;
-    left: 2240px;
+    left: 400%;
 }
 
 .orange {
@@ -94,9 +94,9 @@
 
 .mappluit {
     position: absolute;
-    top:108px;
-    width:255px;
-    left:94px;
+    width: 120%;
+    top: 1.5%;
+    left: -8.5%;
     opacity:0;
 }
 
@@ -110,8 +110,8 @@
 
 .map {
     position:absolute;
-    top:150px;
-    left: 0px;
+    top:15%;
+    left: 0%;
     z-index: 2;
     pointer-events: none;
 }
@@ -126,7 +126,7 @@
 
 .j17 {
     position: absolute;
-    top:380px;
+    top:30%;
     left: 50%;
     margin-left: -60px;
     font-family: 'Lato', sans-serif;
@@ -146,8 +146,8 @@
 
 .pluit-text {
     position: absolute;
-    top:200px;
-    left: 315px;
+    top:15%;
+    left: 50%;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -181,7 +181,7 @@
 }
 .map1{
     position: absolute;
-    top:150px;
+    top:15%;
     opacity: 1;
 }
 .jakarta1 {
@@ -223,29 +223,23 @@
 
 @keyframes map-pluit {
     0% {
-        width: 690px;
-        top: -85px;
-        left: -55px;
         opacity:0;
     }
     100% {
-        width: 690px;
-        top: -85px;
-        left: -55px;
         opacity:1;
     }
 }
 
 @keyframes map-zoom {
     0% {
-        top:150px;
-        left:0px;
-        width: 560px;
+        top:15%;
+        left:0%;
+        width: 100%;
     }
     100% {
-        top: -20px;
-        left: -300px;
-        width: 1500px;
+        top: 5%;
+        left: -53%;
+        width: 267%;
     }
 }
 
@@ -267,21 +261,21 @@
 @keyframes pluit-text {
     0% {
         opacity: 0;
-        top: 200px;
-        left: 315px;
+        top:15%;
+        left: 65%;
     }
     16% {
         opacity: 0;
     }
     32% {
         opacity: 1;
-        top: 200px;
-        left: 315px;
+        top:15%;
+        left: 65%;
     }
     100% {
         opacity: 1;
-        top: 110px;
-        left: 410px;
+        top: 15%;
+        left: 85%;
     }
 }
 
@@ -323,7 +317,7 @@
 }
 
 #button {
-    top: 380px;
+    top: 30%;
     /*background-color: orangered;*/
     position: absolute;
     left:50%;
@@ -345,7 +339,7 @@
 }
 
 #tebak {
-    top: 380px;
+    top: 35%;
     /*background-color: orangered;*/
     position: absolute;
     left:50%;
@@ -395,10 +389,11 @@ h3{
 .text-1 {
     font-family: 'Lato', sans-serif;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    left:30px;
-    top:330px;
+    left:10%;
+    top:30%;
+    width:80%;
     opacity: 0;
 }
 
@@ -414,11 +409,11 @@ h3{
 .text-2 {
     font-family: 'Lato', sans-serif;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
     text-align: right;
-    top:760px;
-    left: 330px;
+    top:60%;
+    left: 50%;
     opacity: 0;
 }
 
@@ -454,8 +449,8 @@ h3{
     font-size: 50px;
     position: fixed;
     text-align: right;
-    top:425px;
-    left: 519px;
+    top:50%;
+    left: 88%;
     cursor: pointer;
     z-index: 5;
     opacity: 0;
@@ -472,8 +467,8 @@ h3{
     font-size: 50px;
     position: fixed;
     text-align: right;
-    top:425px;
-    left: 33px;
+    top:50%;
+    left: 6%;
     cursor: pointer;
     z-index: 5;
     opacity: 0;
@@ -485,17 +480,19 @@ h3{
 }
 
 .text {
+    width:90%;
     position:absolute;
-    top: 200px;
+    top: 15%;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     width: 80%;
     color:white;
-    margin-left: 56px;
+    margin-left: -40%;
+    left: 50%;
 }
 
 .small {
-    font-size: 14px;
+    font-size: 12px;
     color: orange;
 }
 
@@ -505,10 +502,10 @@ h3{
     -moz-appearance: none;
     outline: none;
     position: absolute;
-    top: 470px;
+    top: 35%;
     width: 80%;
     height: 2px;
-    margin-left: 56px;
+    left: 10%;
     background: #333333;
     border-radius: 10px;
 }
@@ -556,8 +553,8 @@ h3{
     position: absolute;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    top: 500px;
-    left: 394px;
+    top: 38%;
+    left: 62%;
     cursor: pointer;
 }
 
@@ -577,17 +574,18 @@ h3{
     position: absolute;
     font-family: 'Lato', sans-serif;
     color: white;
-    left:56px;
+    left:10%;
     pointer-events: none;
+    font-size: 10pt;
 }
 
 .jawaban h1 {
     font-weight: 900;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 #j1 {
-    top:460px;
+    top:40%;
     opacity: 0;
 }
 
@@ -596,7 +594,7 @@ h3{
 }
 
 #j2 {
-    top: 540px;
+    top: 46%;
     opacity: 0;
 }
 
@@ -605,7 +603,7 @@ h3{
 }
 
 #j3 {
-    top:460px;
+    top:40%;
     opacity: 0;
 }
 
@@ -614,7 +612,7 @@ h3{
 }
 
 #j4 {
-    top: 540px;
+    top: 46%;
     opacity: 0;
 }
 
@@ -623,7 +621,7 @@ h3{
 }
 
 #j5 {
-    top:620px;
+    top:52%;
     opacity: 0;
 }
 
@@ -632,7 +630,7 @@ h3{
 }
 
 #j6 {
-    top: 700px;
+    top: 58%;
     opacity: 0;
 }
 
@@ -641,7 +639,7 @@ h3{
 }
 
 #j7 {
-    top:460px;
+    top:40%;
     opacity: 0;
 }
 
@@ -650,7 +648,7 @@ h3{
 }
 
 #j8 {
-    top: 540px;
+    top: 46%;
     opacity: 0;
 }
 
@@ -659,7 +657,7 @@ h3{
 }
 
 #j9 {
-    top:620px;
+    top:52%;
     opacity: 0;
 }
 
@@ -668,10 +666,14 @@ h3{
 }
 
 .hiroshi {
-    width: 240px;
+    width: 45%;
     position: absolute;
-    top: 430px;
-    left: 35px;
+    top: 38%;
+    left: 10%;
     pointer-events: none;
     opacity: 0;
+}
+
+html {
+
 }
