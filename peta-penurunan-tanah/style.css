@@ -13,7 +13,7 @@
      /*background-color: aqua;*/
      position: fixed;
      top: 32px;
-     left:484px;
+     right : 5%;
      z-index: 5;
 }
 
@@ -23,7 +23,7 @@
     /*background: darkgreen;*/
     position: fixed;
     top:32px;
-    left: 372px;
+    right: 17%;
     text-align: right;
     color: #D40000;
     font-family: 'Lato', sans-serif;
@@ -102,7 +102,7 @@
     font-size: 30pt;
     position: absolute;
     top: 710px;
-    left: 440px;
+    right: 5%;
     z-index: 5;
     text-align: right;
 }
@@ -171,4 +171,22 @@
     left: 108px;
     z-index:6;
     cursor: pointer;
+}
+
+@media (max-width: 540px) {
+    .container {
+        width:100%;
+    }
+
+    .jakarta-bg {
+        width: 100%;
+    }
+
+    .subsiden {
+        width: 100%;
+    }
+
+    .jakarta-over {
+        width: 100%;
+    }
 }
