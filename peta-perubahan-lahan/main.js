@@ -9,6 +9,8 @@ var $prev = $('.prev');
 var $next = $('.next');
 var a = 1;
 var count = 0;
+var width = $('.container').width();
+var height = $('.container').height();
 
 function start() {
     $s1.css('opacity',1);
@@ -116,7 +118,7 @@ function slide1a() {
     $s2.css('opacity',0);
     $s3.css('opacity',0);
     $tahun.html('1976');
-    $slidetahun.val(1);
+    $slidetahun.val(0);
     a=1
 }
 
@@ -158,26 +160,50 @@ function noTransition() {
 
 var svg = d3.select('.container')
     .append('svg')
-    .attr('width', 560 )
-    .attr('height', 600 )
+    .attr('width', width )
+    .attr('height', height )
     .attr('id', 'svg');
 
 var data = [0,60,120];
 
-var mul = ((560 * 0.9 - 18) / 120);
+var data2 = [1976, 2006, 2019];
+
+var scale = d3.scaleLinear()
+    .domain(data)
+    .range(data2);
+
+
+var w = $slidetahun.width();
+
+var selisih = (width - w) / 2;
+
+var mul = ((w - 18) / 120);
 
 svg
     .selectAll('line')
     .data(data)
     .enter()
     .append('line')
-    .attr('x1', d => d * mul + 39)
-    .attr('x2', d => d * mul + 39)
+    .attr('x1', d => d * mul + selisih + 11)
+    .attr('x2', d => d * mul + selisih + 11)
     .attr('y1', 512 )
     .attr('y2', 535 )
     .style('stroke', 'black')
     .style('stroke-width', 2)
     .style('stroke-linecap', 'round');
+
+svg
+    .selectAll('text')
+    .data(data)
+    .enter()
+    .append('text')
+    .attr('id', 'year')
+    .attr('x', d => d * mul + selisih + 11)
+    .attr('y', 560 )
+    .text(d => scale(d) )
+    .attr('text-anchor', 'middle')
+    .style('z-index', 5)
+    .style('color', 'black');
 
 
 $slidetahun.on('change', function() {
