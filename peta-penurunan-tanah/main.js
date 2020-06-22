@@ -1,8 +1,8 @@
 var $slide = $('.slide-tahun');
 var $tahun  = $('.tahun');
 var val = $slide.val();
-var url1 = "/peta-penurunan-tanah/img/seq/export_0000";
-var url2 = "/peta-penurunan-tanah/img/seq/export_000";
+var url1 = "/img/seq/export_0000";
+var url2 = "/img/seq/export_000";
 var sub = document.getElementsByClassName('subsiden');
 var $play = $('.play');
 var $prev = $('.prev');
@@ -203,15 +203,18 @@ $slide.on('input', function() {
     //console.log(val);
 })
 
+var width = $('.container').parent().width();
+
+
 var svg = d3.select('.container')
     .append('svg')
-    .attr('width', 560 )
+    .attr('width', width )
     .attr('height', 850 )
     .attr('id', 'svg');
 
 var data = [0,10,20,28,53];
 
-var mul = ((560 * 0.9 - 18) / 53);
+var mul = ((width * 0.9 - 18) / 53);
 
 svg
     .selectAll('line')
