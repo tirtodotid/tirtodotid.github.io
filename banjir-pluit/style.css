@@ -3,7 +3,7 @@
     height: 640px;
     background-color: #262626;
     position: relative;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 
