@@ -54,3 +54,14 @@ p {
     line-height: 0.3em;
     font-weight:900;
 }
+
+@media (max-width: 540px) {
+     .logo {
+     right:10px;
+     }
+     
+     .source {
+     right: 65px;
+}
+     
+}
