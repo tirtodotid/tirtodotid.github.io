@@ -1,0 +1,422 @@
+/*------------MAIN STYLE------------*/
+.container {
+    margin: 0;
+    height: 640px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: steelblue;
+}
+
+.credit {
+    background-color: indianred;
+    position: absolute;
+    z-index: 9999;
+}
+
+.logo {
+    position: absolute;
+}
+
+.sumber {
+    background-color: lightsalmon;
+    position: absolute;
+    text-align: right;
+    font-family: Lato, sans-serif;
+}
+
+.creditstrong {
+    font-weight: 800;
+}
+/*----------END MAIN STYLE----------*/
+
+.main-page {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: #fffdf5;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+.preface {
+    margin: 0;
+    width: 70%;
+    height: 70%;
+    position: relative;
+}
+
+.container-long-1 {
+    position:absolute;
+    height: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container-long-2 {
+    position:absolute;
+    height: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+    z-index: 0;
+}
+
+.container-long-3 {
+    position:absolute;
+    height: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+    z-index: 0;
+    pointer-events: none;
+
+}
+
+.page {
+    width: 560px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.chapter-1 {
+    background-color: #fffdf5;
+}
+
+.chapter-2 {
+    background-color: #fffdf5;
+}
+
+.chapter-3 {
+    background-color: #fffdf5;
+}
+#c1p1 {
+    background-color: transparent;
+}
+
+#c2p1 {
+    background-color: transparent;
+}
+
+#c3p1 {
+    background-color: transparent;
+}
+
+.intro {
+    font-family: Lato, sans-serif;
+    text-align: justify;
+    color: #2f1f2e;
+}
+
+.select {
+    background-color: #fffdf5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.victim {
+    background-color: turquoise;
+    margin: 10px;
+    filter: grayscale(100);
+    cursor: pointer;
+    transition: filter 0.5s;
+}
+
+.desc {
+    width: 100%;   
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.title {
+    width: 100%;
+    font-family: Lato, sans-serif;
+    margin-top: 25px;
+    transition: opacity 0.5s;
+    opacity: 0;
+    font-weight: 800;
+    color: #2f1f2e;
+}
+
+.read {
+    width: 50%;
+    background-color: #f04b5c;
+    padding: 10px;
+    font-family: Lato, sans-serif;
+    font-weight: 800;
+    margin-top: 25px;    
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+    opacity: 0;
+    color: white;
+}
+
+.read:hover {
+    filter: brightness(1.2);
+}
+
+.next {
+    position: absolute;
+    font-family: 'Anonymous Pro', monospace;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    font-weight:700;
+    pointer-events: none;
+}
+
+.previous {
+    position: absolute;
+    font-family: 'Anonymous Pro', monospace;
+    display:grid;
+    place-items: center;
+    opacity: 0;
+    font-weight:700;
+    pointer-events: none;
+}
+
+.return {
+    position: absolute;
+    font-family: Lato, sans-serif;
+    z-index: 9999;
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    background-color: #f04b5c;
+}
+
+.subtitle {
+    position: absolute;
+    font-family: Lato, sans-serif;
+    color: #f04a5e;
+    z-index: 9999;
+    font-weight: 800;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+.image {
+    width: 75%;
+    height: 75%;
+}
+
+.img-victim {
+    width: 100%;
+}
+
+.narasi {
+    font-family: Lato, sans-serif;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+}
+
+.quote {
+    font-weight: 600;
+    background-color: #f04a5e;
+    padding: 3px;
+    border-radius: 9px;
+    color: white;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.pilih {
+    font-family: Lato, sans-serif;
+    margin-top: 50px;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+@media (max-width:500px) { /* MOBILE */
+
+    .subtitle {
+        left: 20px;
+        top: 20px;
+        font-size: 10pt;
+    }
+
+    .return {
+        bottom: 20px;
+        font-weight: 800;
+        font-size: 8pt;
+        width: 70px;
+        left: 120px;
+    }
+
+    .next {
+        width: 22px;
+        height: 22px;
+        font-size: 30pt;
+        right: 10px;
+        top: 270px;
+    }
+
+    .previous {
+        width: 22px;
+        height: 22px;
+        font-size: 30pt;
+        left: 10px;
+        top: 270px;
+    }
+
+    .credit {
+        right:20px;
+        top:20px;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 38px;
+        right: 0px;
+    }
+    
+    .sumber {
+        width: 120px;
+        height: 38px;
+        right: 39px;
+        font-size: 8pt;
+    }
+
+    .intro {
+        font-size: 8pt;
+    }
+
+    .title {
+        font-size: 13pt;
+    }
+
+    .read {
+        font-size: 8pt;
+    }
+
+    .victim {
+        width: 64px;
+        height: 64px;
+        margin: 6px;
+        border-radius: 32px;
+    }
+
+    .img-victim {
+        border-radius: 32px;
+    }
+
+    .page {
+        width: 330px;
+        height: 100%;
+    }
+
+    .narasi {
+        font-size: 8pt;
+    }
+
+    .pilih {
+        font-size: 10pt;
+    }
+
+    .quote {
+        padding: 1px;
+        border-radius: 4px;
+        color: white;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+
+} /* END --------------------------- MOBILE */
+
+@media (min-width:501px) { /* DESKTOP */
+    .credit {
+        right:32px;
+        top:32px;
+    }
+    
+    .logo {
+        width: 47px;
+        height: 59px;
+        right: 0px;
+    }
+    
+    .sumber {
+        width: 180px;
+        height: 38px;
+        right: 59px;
+        font-size: 12pt;
+    }
+
+    .intro {
+        font-size: 13pt;
+    }
+
+    .title {
+        font-size: 18pt;
+    }
+
+    .read {
+        font-size: 13pt;
+    }
+
+    .victim {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 50px;
+    }
+
+    .img-victim {
+        border-radius: 50px;
+    }
+
+    .next {
+        width: 30px;
+        height: 30px;
+        font-size: 40pt;
+        right: 15px;
+        top: 395px;
+    }
+
+    .previous {
+        width: 30px;
+        height: 30px;
+        font-size: 40pt;
+        left: 15px;
+        top: 395px;
+    }
+
+    .return {
+        bottom: 32px;
+        border-radius: 50px;
+        font-size: 13pt;
+        width: 100px;
+        left: 220px;
+    }
+
+    .subtitle {
+        left: 32px;
+        top: 32px;
+        font-size: 14pt;
+    }
+
+    .narasi {
+        font-size: 13pt;
+    }
+
+    .pilih {
+        font-size: 14pt;
+    }
+
+
+} /* END ---------------------------- DESKTOP */
