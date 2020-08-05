@@ -106,7 +106,7 @@
 
 .intro {
     font-family: Lato, sans-serif;
-    text-align: justify;
+    text-align: left;
     color: #2f1f2e;
 }
 
@@ -216,7 +216,7 @@
 
 .narasi {
     font-family: Lato, sans-serif;
-    text-align: justify;
+    text-align: left;
     padding: 10px;
     margin: 10px;
 }
