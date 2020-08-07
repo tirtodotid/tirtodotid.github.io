@@ -114,7 +114,7 @@
     background-color: #fffdf5;
     width: 100%;
     display: flex;
-    justify-content: center;
+    left-content: center;
     margin-top: 10px;
 }
 
@@ -208,13 +208,21 @@
 .image {
     width: 75%;
     height: 75%;
+    position: relative;
 }
 
 .img-victim {
     width: 100%;
 }
 
-.narasi {
+.img-story {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.narasi { 
+    position: absolute;  
     font-family: Lato, sans-serif;
     text-align: left;
     padding: 10px;
