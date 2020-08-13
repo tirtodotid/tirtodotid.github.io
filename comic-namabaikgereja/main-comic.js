@@ -5,7 +5,7 @@ var container = document.querySelector('.container')          //
 var gw, gh;                                                   //
 var font, space, mult, left, top;
                                                               //
-console.log( 'initial size','width' ,w, 'height', h) 
+//console.log( 'initial size','width' ,w, 'height', h) 
 console.log(container.style.height)//
                                                               //
 var radius // infographic radius                              //
