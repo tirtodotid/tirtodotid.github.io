@@ -1,7 +1,7 @@
 //RESPONSIVE TIRTO MOBILE-DESKTOP //////////////////////////////
 var container = document.querySelector('.container')          //
-var w = container.offsetWidth                                 //
-var h = container.offsetHeight                                //
+var w = document.clientWidth                                 //
+var h = document.clientHeight                                //
 var gw, gh;                                                   //
 var font, space, mult, left, top;
                                                               //
