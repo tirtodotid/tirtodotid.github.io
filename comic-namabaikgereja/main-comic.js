@@ -4,6 +4,7 @@ var container = document.querySelector('.container')          //
 //var h = parent.document.body.clientHeight                      //
 var gw, gh;                                                   //
 var font, space, mult, left, top;
+var slide
                                                               //
 //console.log( 'initial size','width' ,w, 'height', h) 
 console.log(container.style.height)//
