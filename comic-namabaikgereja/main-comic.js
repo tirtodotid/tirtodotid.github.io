@@ -5,16 +5,18 @@ var h = container.offsetHeight                                //
 var gw, gh;                                                   //
 var font, space, mult, left, top;
                                                               //
-//console.log( 'initial size','width' ,w, 'height', h)        //
+console.log( 'initial size','width' ,w, 'height', h)          //
                                                               //
 var radius // infographic radius                              //
                                                               //
 if ( w < h ) { // MOBILE
+    console.log('mobile size','width' ,w, 'height', h)
     slide = 330                                               //
     container.style.height = '600px'                          //
     container.style.width = '330px'                           //
                                                               //
-} else if ( w > h ) { // DESKTOP 
+} else if ( w > h ) { // DESKTOP
+    console.log('desktop size','width' ,w, 'height', h)
     slide = 560                             //
     container.style.height = '850px'                          //
     container.style.width = '560px'                           //
