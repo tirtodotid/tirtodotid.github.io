@@ -11,15 +11,15 @@ var radius // infographic radius                              //
                                                               //
 if ( w < h ) { // MOBILE
     console.log('parent document mobile size','width' ,w, 'height', h)
-    slide = 330                                               //
-    container.style.height = '600px'                          //
-    container.style.width = '330px'                           //
+    slide = 360                                               //
+    //container.style.height = '600px'                          //
+    //container.style.width = '330px'                           //
                                                               //
 } else if ( w > h ) { // DESKTOP
     console.log('parent document desktop size','width' ,w, 'height', h)
     slide = 560                             //
-    container.style.height = '850px'                          //
-    container.style.width = '560px'                           //
+    //container.style.height = '850px'                          //
+    //container.style.width = '560px'                           //
                                                               //
 };                                                            //
 //END RESPONSIVE TIRTO MOBILE-DESKTOP //////////////////////////
@@ -515,7 +515,7 @@ function initialSlide() {
 
 }
 
-// Louis Lugas c2020
+// Louis Lugas c2020 tirto.id
 
 
 
