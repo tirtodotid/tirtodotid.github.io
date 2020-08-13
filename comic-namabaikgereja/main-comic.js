@@ -7,16 +7,17 @@ var font, space, mult, left, top;
                                                               //
 //console.log( 'initial size','width' ,w, 'height', h) 
 console.log(container.style.height)//
+var check = window.getComputedStyle(container).height)
                                                               //
 var radius // infographic radius                              //
                                                               //
-if ( container.style.height == 700 ) { // MOBILE
+if ( check == '700px' ) { // MOBILE
     console.log('parent document mobile size','width' ,w, 'height', h)
     slide = 360                                               //
     //container.style.height = '600px'                          //
     //container.style.width = '330px'                           //
                                                               //
-} else if ( container.style.height == 850 ) { // DESKTOP
+} else if ( check == '850px' ) { // DESKTOP
     console.log('parent document desktop size','width' ,w, 'height', h)
     slide = 560                             //
     //container.style.height = '850px'                          //
