@@ -7,7 +7,7 @@ var font, space, mult, left, top;
 var slide
                                                               //
 //console.log( 'initial size','width' ,w, 'height', h) 
-var check = window.getComputedStyle(container).height)
+var check = window.getComputedStyle(container).height
                                                               //
 var radius // infographic radius                              //
                                                               //
