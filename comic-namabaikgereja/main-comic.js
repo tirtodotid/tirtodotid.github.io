@@ -1,7 +1,7 @@
 //RESPONSIVE TIRTO MOBILE-DESKTOP //////////////////////////////
 var container = document.querySelector('.container')          //
-var w = parent.document.body.clientWidth                      //
-var h = parent.document.body.clientHeight                      //
+//var w = parent.document.body.clientWidth                      //
+//var h = parent.document.body.clientHeight                      //
 var gw, gh;                                                   //
 var font, space, mult, left, top;
                                                               //
@@ -9,13 +9,13 @@ console.log( 'initial size','width' ,w, 'height', h)          //
                                                               //
 var radius // infographic radius                              //
                                                               //
-if ( w < h ) { // MOBILE
+if ( container.style.height == 700 ) { // MOBILE
     console.log('parent document mobile size','width' ,w, 'height', h)
     slide = 360                                               //
     //container.style.height = '600px'                          //
     //container.style.width = '330px'                           //
                                                               //
-} else if ( w > h ) { // DESKTOP
+} else if ( container.style.height == 850 ) { // DESKTOP
     console.log('parent document desktop size','width' ,w, 'height', h)
     slide = 560                             //
     //container.style.height = '850px'                          //
