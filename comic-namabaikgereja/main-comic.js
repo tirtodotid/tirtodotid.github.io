@@ -10,7 +10,7 @@ console.log( 'initial size','width' ,w, 'height', h)          //
 var radius // infographic radius                              //
                                                               //
 if ( w < h ) { // MOBILE
-    console.log('parent dpcument mobile size','width' ,w, 'height', h)
+    console.log('parent document mobile size','width' ,w, 'height', h)
     slide = 330                                               //
     container.style.height = '600px'                          //
     container.style.width = '330px'                           //
