@@ -252,8 +252,8 @@
 @media (max-width:500px) { /* MOBILE */
     
     .container {
-        width: 330px;
-        height: 600px;
+        width: 360px;
+        height: 700px;
     }
 
     .subtitle {
@@ -328,7 +328,7 @@
     }
 
     .page {
-        width: 330px;
+        width: 360px;
         height: 100%;
     }
 
