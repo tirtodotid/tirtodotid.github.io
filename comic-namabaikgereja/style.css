@@ -114,7 +114,7 @@
     background-color: #fffdf5;
     width: 100%;
     display: flex;
-    left-content: center;
+    justify-content: center;
     margin-top: 10px;
 }
 
@@ -250,6 +250,11 @@
 
 
 @media (max-width:500px) { /* MOBILE */
+    
+    .container {
+        width: 330px;
+        height: 600px;
+    }
 
     .subtitle {
         left: 20px;
@@ -347,6 +352,11 @@
 } /* END --------------------------- MOBILE */
 
 @media (min-width:501px) { /* DESKTOP */
+    .container {
+        width: 560px;
+        height: 850px;
+    }
+    
     .credit {
         right:32px;
         top:32px;
