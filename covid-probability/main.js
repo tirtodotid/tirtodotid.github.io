@@ -17,7 +17,7 @@ if ( h == 800 ) { // MOBILE                               //
     space = 5
     mult = 17
     left = 32
-    fromtop = 15
+    fromtop = 55
                                                               //
 } else if ( h == 850 ) { // DESKTOP                       //
     radius = w * 0.46                                         //
