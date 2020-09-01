@@ -51,10 +51,10 @@ var bg = svg.append("rect")
 var g1 = svg.append('g')
 .attr('transform', 'translate('+gw+','+gh+')')
 
-var probIndo = 4,
-    probDki = 21,
-    probBali = 6,
-    probJatim = 4;
+var probIndo = 6,
+    probDki = 42,
+    probBali = 12,
+    probJatim = 8;
 
 var prob;
 
