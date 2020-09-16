@@ -121,9 +121,13 @@
     }
 
     #title {
-        font-size: 16pt;
+        font-size: 15pt;
         left: 20px;
         top: 20px;
+    }
+    
+    .thin {
+        font-size: 12pt;
     }
 } /* END --------------------------- MOBILE */
 
@@ -171,8 +175,12 @@
     }
 
     #title {
-        font-size: 24pt;
+        font-size: 22pt;
         left: 32px;
         top:32px;
+    }
+    
+    .thin {
+        font-size: 18pt;
     }
 } /* END ---------------------------- DESKTOP */
