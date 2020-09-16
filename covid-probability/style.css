@@ -45,6 +45,10 @@
     color: white;
 }
 
+.thin {
+    font-weight: 300;
+}
+
 #acak {
     color: black;
     position: absolute;
@@ -100,13 +104,13 @@
     .option {
         font-size: 9pt;
         left: 20px;
-        top: 105px;
+        top: 125px;
     }
 
     #acak {
         font-size: 9pt;
         right: 20px;
-        top: 105px;
+        top: 125px;
         width: 35px;
         text-align: center;
     }
@@ -150,13 +154,13 @@
     .option {
         font-size: 14pt;
         left: 32px;
-        top: 160px;
+        top: 190px;
     }
 
     #acak {
         font-size: 14pt;
         right: 32px;
-        top: 160px;
+        top: 190px;
         width: 60px;
         text-align: center;
     }
