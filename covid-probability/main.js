@@ -9,7 +9,7 @@ var font, space, mult, left, top;
                                                               //
 var radius // infographic radius                              //
                                                               //
-if ( h == 800 ) { // MOBILE                               //
+if ( h == 650 ) { // MOBILE                               //
     radius = w * 0.46                                         //
     gw = w/2                                                  //
     gh = h/2                                                  //
