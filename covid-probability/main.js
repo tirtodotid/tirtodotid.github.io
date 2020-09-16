@@ -164,7 +164,7 @@ function sampling() {
     //console.log(opt.value)
     //console.log(prob)
 
-    document.getElementById('title').innerHTML = '<span class="highlight">' + prob + '</span> dari <span class="highlight">10.000 </span> orang<br>di <span class="highlight">'+ opt.text +'</span> positif<br> terjangkit Covid-19' 
+    document.getElementById('title').innerHTML = '<span class="highlight">' + prob + '</span> dari <span class="highlight">10.000 </span> orang<br>di <span class="highlight">'+ opt.text +'</span> positif<br> terjangkit Covid-19<br><span class="thin">(30 Agustus 2020)</span>' 
     
     var probArray = d3.range(prob).map(() => {
         var angle = Math.random() * Math.PI * 2;
