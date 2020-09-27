@@ -1,0 +1,493 @@
+/*------------MAIN STYLE------------*/
+.container {
+    margin: 0;
+    height: 640px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.credit {
+    background-color: indianred;
+    position: absolute;
+    z-index: 9999;
+}
+
+.logo {
+    position: absolute;
+}
+
+.sumber {
+    background-color: lightsalmon;
+    position: absolute;
+    text-align: right;
+    font-family: Lato, sans-serif;
+}
+
+.creditstrong {
+    font-weight: 800;
+}
+/*----------END MAIN STYLE----------*/
+
+.next {
+    position: absolute;
+    font-family: 'Anonymous Pro', monospace;
+    opacity: 1;
+    font-weight:700;
+    cursor: pointer;
+}
+
+.previous {
+    position: absolute;
+    font-family: 'Anonymous Pro', monospace;
+    opacity: 1;
+    font-weight:700;
+    cursor: pointer;
+}
+
+.inner {
+    width: 95%;
+    height: 95%;
+    display: grid;
+    place-items: center;
+}
+
+.case {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.mobility {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.story {
+    position: relative;
+    background-color: rgb(233, 233, 233);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+}
+
+/* AXIS */
+
+.xaxis .domain {
+    display:none;
+}
+
+.yaxis .domain {
+    display: none
+}
+
+.xaxis .tick line{
+    stroke-dasharray: 2 2;
+    color: #666666;
+    opacity: 0;
+}
+
+.yaxis .tick line {
+    color: #a8a8a8;
+    opacity:.1;
+}
+
+.yaxis .tick text{
+    color: black;
+    opacity:1;
+}
+
+/* CHART */
+
+.overlay {
+    fill: none;
+    display: null;
+    pointer-events: all;
+}
+
+/* TOOLTIP */
+
+.storyline {
+    font-size: 11pt;
+    line-height: 1.1rem;
+    font-family: "Lato";
+    width: 83%;
+    display: inline;
+    align-items: center;
+}
+.date {
+    color:#d10808;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.casetooltip {	
+    font-family: "Lato";			
+    font: 11pt sans-serif;	
+    font-weight:400;	
+    text-align: right;
+    transform: translate(250px,350px);
+}
+
+.jumlah {	
+    font-family: "Lato";			
+    font: 11pt sans-serif;	
+    font-weight:400;	
+    text-align: right;
+    transform: translate(250px,350px);
+}
+
+.number {
+    font-family: "Lato";
+    font-size: 16pt;
+    font-weight: 600;
+    text-align: right;
+    transform: translate(250px,350px);
+}
+
+div.legendtooltip {	
+    position: absolute;	
+    top: 100px;
+    left:60px;										
+    padding: 10px;	
+    font-family: "Lato";			
+    font: 11pt sans-serif;		
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;	
+    opacity: 0;		
+    line-height: 1.5em;
+}
+
+div.markertooltip {	
+    position: absolute;	
+    top: 100px;
+    left:60px;										
+    padding: 10px;	
+    font-family: "Lato";			
+    font: 11pt sans-serif;		
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;	
+    opacity: 0;		
+    line-height: 1.5em;
+}
+
+div.tooltip {	
+    position: absolute;	
+    top: 30px;
+    left:60px;										
+    padding: 10px;	
+    font-family: "Lato";			
+    font: 11px sans-serif;		
+    background: lightgrey;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;	
+    opacity: 0;		
+}
+
+.dot-case {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-home {
+    height: 10px;
+    width: 10px;
+    background-color: #d15b2c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-work {
+    height: 10px;
+    width: 10px;
+    background-color: #3d3db7;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-grocery {
+    height: 10px;
+    width: 10px;
+    background-color: #e2a539;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-retail {
+    height: 10px;
+    width: 10px;
+    background-color: #a14bc9;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-parks {
+    height: 10px;
+    width: 10px;
+    background-color: #37aa83;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-transit {
+    height: 10px;
+    width: 10px;
+    background-color:#28a8df;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-home1 {
+    background-color: #d15b2c;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    color: white;
+}
+
+.dot-work1 {
+    background-color: #3d3db7;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.dot-grocery1 {
+    background-color: #e2a539;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.dot-retail1 {
+    background-color: #a14bc9;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.dot-parks1 {
+    background-color: #37aa83;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    color: white;
+}
+
+.dot-transit1 {
+    background-color:#28a8df;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    color: white;
+}
+
+/*
+.call(g => g.select(".domain").remove())
+            .selectAll(".tick")
+                .style("stroke-opacity", "0.5")
+                .style("color", "black")
+                .attr("stroke-dasharray", "2,2")
+            .selectAll("text")
+                .style("fill", "black")
+                .attr("y", 10)
+                .style("font-weight", 600);
+*/
+
+@media (max-width:500px) { /* MOBILE */
+    
+    .container {
+        width: 360px;
+        height: 700px;
+    }
+
+    .next {
+        width: 22px;
+        height: 22px;
+        font-size: 30pt;
+        bottom:75px;
+        right:0px;
+    }
+
+    .previous {
+        width: 22px;
+        height: 22px;
+        font-size: 30pt;
+        bottom:75px;
+        left:0px;
+    }
+
+    .credit {
+        right:20px;
+        top:20px;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 38px;
+        right: 0px;
+    }
+    
+    .sumber {
+        width: 120px;
+        height: 38px;
+        right: 39px;
+        font-size: 8pt;
+    }
+
+    .case {
+        height: 100px;
+    }
+
+    .mobility {
+        height: 412px;
+    }
+    
+    .story {
+        height: 151px;
+    }
+
+    .storyline {
+        font-size: 10pt;
+    }
+
+    .date {
+        font-size: 11pt;
+    }
+
+    div.legendtooltip {	
+        top: 120px;
+        left:30px;										
+        padding: 10px;	
+        font-family: "Lato";			
+        font: 10pt sans-serif;		
+        border: 0px;		
+        border-radius: 8px;			
+        pointer-events: none;	
+        opacity: 0;		
+        line-height: 1.5em;
+    }
+    
+    div.markertooltip {	
+        top: 120px;
+        left:30px;										
+        padding: 10px;	
+        font-family: "Lato";			
+        font: 10pt sans-serif;		
+        border: 0px;		
+        border-radius: 8px;			
+        pointer-events: none;	
+        opacity: 0;		
+        line-height: 1.5em;
+    }
+    
+    div.tooltip {	
+        top: 20px;
+        left:30px;										
+        padding: 10px;	
+        font-family: "Lato";			
+        font: 10px sans-serif;		
+        background: lightgrey;	
+        border: 0px;		
+        border-radius: 8px;			
+        pointer-events: none;	
+        opacity: 0;		
+    }
+
+    .casetooltip {	
+        bottom: 180px;
+        left:50px;	
+        font-size:9pt;
+        text-align: right;
+        transform: translate(150px,240px);
+    }
+
+    .jumlah {				
+        font: 9pt sans-serif;	
+        text-align: right;
+        transform: translate(150px,240px);
+    }
+
+    .number {
+        font-size:14pt;
+        text-align: right;
+        transform: translate(150px,240px);
+    }
+    
+
+} /* END --------------------------- MOBILE */
+
+@media (min-width:501px) { /* DESKTOP */
+    .container {
+        width: 560px;
+        height: 850px;
+    }
+    
+    .credit {
+        right:32px;
+        top:32px;
+    }
+    
+    .logo {
+        width: 47px;
+        height: 59px;
+        right: 0px;
+    }
+    
+    .sumber {
+        width: 180px;
+        height: 38px;
+        right: 59px;
+        font-size: 12pt;
+    }
+
+    .next {
+        width: 30px;
+        height: 30px;
+        font-size: 40pt;
+        right: 15px;
+        bottom: 79px;
+    }
+
+    .previous {
+        width: 30px;
+        height: 30px;
+        font-size: 40pt;
+        left: 15px;
+        bottom: 79px;
+    }
+
+    .case {
+        height: 110px;
+    }
+
+    .mobility {
+        height: 538px;
+    }
+    
+    .story {
+        height: 159px;
+    }
+
+    .storyline {
+        line-height: 1.4rem;
+    }
+
+} /* END ---------------------------- DESKTOP */
