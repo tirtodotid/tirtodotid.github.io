@@ -1,4 +1,4 @@
-var url = "google-covid-mobility/2020_nz_region_mobility_report_edit.csv"
+var url = "2020_nz_region_mobility_report_edit.csv"
 
 var wmob = $('.mobility').width()
 var hmob = $('.mobility').height()
