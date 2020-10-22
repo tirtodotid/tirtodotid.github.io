@@ -10,7 +10,7 @@ console.log(winner, hinner)
 console.log(width, height)
 console.log(url)
 
-var margin = {top:80, left:30, right:25, bottom:40},
+var margin = {top:80, left:30, right:25, bottom:80},
     h = hinner - margin.top - margin.bottom,
     w = winner;
 
@@ -27,11 +27,12 @@ var select = $('.sort-select')
 svg = d3
     .select(".inner")
     .append("svg")
+    .attr("class","svgcontainer")
     .attr("width", w)
     .attr("height", h)
     .append("g")
     .attr("height", h)
-    .attr("transform","translate(0,90)");
+    .attr("transform","translate(0)");
 
 //TOOLTIP
 var tooltip = d3.select(".inner")
