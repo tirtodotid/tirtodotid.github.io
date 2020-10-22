@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Google Covid Mobility Graph</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='style1.css'>
+    <script src="https://d3js.org/d3-format.v2.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous"></script>
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+</head>
+<body>
+    <div class='container'>        
+        <div class='credit'>
+            <div class='logo'><img src="img/logo-tirto-01.svg"></img></div>
+            <!--
+            <div class='sumber'>
+                Sumber: Lorem Ipsum
+                <br>
+                <br>
+                <span class='creditstrong'>LGS</span>
+            </div>  
+            -->
+        </div>
+        <div class='inner'>
+            <label class='sort-label' for='sort'>Urutkan berdasarkan:</label>
+            <select name='sort' class='sort-select' size="1">
+                <option value='total'>Nilai Total</option>
+                <option value='quar'>Efisiensi Karantina</option>
+                <option value='gov'>Efisiensi Pemerintahan</option>
+                <option value='mon'>Deteksi dan Pemantauan</option>
+                <option value='health'>Kesiapan Fasilitas Kesehatan</option>
+                <option value='vul'>Kerentanan Negara</option>
+                <option value='emer'>Kesiapan Dalam Kondisi Darurat</option>
+            </select>
+            <div class='legend'>
+                <div class='bullet' id='b1'></div><span>Efisiensi Karantina</span><br>
+                <div class='bullet' id='b2'></div><span>Efisiensi Pemerintahan</span><br>
+                <div class='bullet' id='b3'></div><span>Deteksi dan Pemantauan</span><br>
+                <div class='bullet' id='b4'></div><span>Kesiapan Fasilitas Kesehatan</span><br>
+                <div class='bullet' id='b5'></div><span>Kerentanan Negara</span><br>
+                <div class='bullet' id='b6'></div><span>Kesiapan Dalam Kondisi Darurat</span>
+            </div>
+        </div>
+        
+        
+        </div>
+        
+    </div>
+
+    
+    
+    <script src='main-mobile1.js'></script>
+    
+</body>
+</html>
