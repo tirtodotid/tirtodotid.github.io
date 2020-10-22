@@ -154,6 +154,8 @@ d3.csv(url).then(function(data) {
             //
             d3
             .select(this)
+            .style("stroke","black")
+            .style("stroke-width", 1.5)
             tooltip
             .transition()
             .duration(100)
@@ -170,6 +172,9 @@ d3.csv(url).then(function(data) {
             .transition()
             .duration(100)
             .style("opacity",0)
+            d3
+            .select(this)
+            .style("stroke", "none")
         })
 
         var textTotal = stackbar
@@ -596,4 +601,6 @@ d3.csv(url).then(function(data) {
 
 
 }); // END D3.CSV LINE CHART
+
+//Copyright Louis Lugas // tirto.id
 
