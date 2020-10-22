@@ -162,7 +162,7 @@ d3.csv(url).then(function(data) {
             .style("opacity",1)
         })
         .on("mousemove",function(){
-            let top = d3.mouse(this)[1]+120
+            let top = d3.mouse(this)[1]+90
             tooltip
             .style("top",top+"px")
             .style("left",d3.mouse(this)[0]+"px")
