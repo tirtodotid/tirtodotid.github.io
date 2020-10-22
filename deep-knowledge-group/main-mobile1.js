@@ -29,9 +29,9 @@ svg = d3
     .append("svg")
     .attr("width", w)
     .attr("height", h)
-    .attr("transform","translate(0,90)")
     .append("g")
-    .attr("height", h);
+    .attr("height", h)
+    .attr("transform","translate(0,90)");
 
 //TOOLTIP
 var tooltip = d3.select(".inner")
