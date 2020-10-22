@@ -20,15 +20,20 @@
 }
 
 .sumber {
-    background-color: lightsalmon;
+    background-color: rgb(240,240,240);
     position: absolute;
-    text-align: right;
-    font-family: Lato, sans-serif;
+    text-align: center;
+    font-family:  sans-serif;
+    font-size:10px;
+    bottom:0;
+    padding:10px;
+    width:100%
 }
 
 .creditstrong {
     font-weight: 800;
 }
+
 /*----------END MAIN STYLE----------*/
 
 .inner {
@@ -38,6 +43,9 @@
     place-items: center;
 }
 
+.svgcontainer {
+    position: absolute;
+}
 
 /* AXIS */
 
@@ -129,6 +137,7 @@
     background-color: #edc849;
 }
 
+
 @media (max-width:500px) { /* MOBILE */
     
     .container {
@@ -147,12 +156,6 @@
         right: 0px;
     }
     
-    .sumber {
-        width: 120px;
-        height: 38px;
-        right: 39px;
-        font-size: 8pt;
-    }
     .sort-select {
         position: absolute;
         left: 9px;
@@ -173,6 +176,10 @@
         font-size: 12px;
         left: 9px;
         top: 80px;
+    }
+
+    .svgcontainer {
+        top:200px;
     }
 
     
@@ -196,12 +203,6 @@
         right: 0px;
     }
     
-    .sumber {
-        width: 180px;
-        height: 38px;
-        right: 59px;
-        font-size: 12pt;
-    }
     .sort-select {
         position: absolute;
         left: 16px;
@@ -222,6 +223,10 @@
         font-size: 12px;
         left: 16px;
         top: 75px;
+    }
+    
+    .svgcontainer {
+        top:200px;
     }
 
     
