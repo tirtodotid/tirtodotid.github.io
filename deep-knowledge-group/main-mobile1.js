@@ -12,7 +12,7 @@ console.log(url)
 
 var margin = {top:80, left:30, right:25, bottom:40},
     h = hinner - margin.top - margin.bottom,
-    w = winner - margin.left - margin.right;
+    w = winner;
 
 console.log(w, h)
 
