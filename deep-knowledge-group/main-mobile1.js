@@ -1,4 +1,4 @@
-var url = "/c19_regional_safety_assessment.csv"
+var url = "c19_regional_safety_assessment.csv"
 
 var winner = $('.inner').width()
 var hinner = $('.inner').height()
