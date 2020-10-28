@@ -1,0 +1,255 @@
+/*------------MAIN STYLE------------*/
+.container {
+    margin: 0;
+    height: 1280px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.credit {
+    background-color: indianred;
+    position: absolute;
+    z-index: 9999;
+}
+
+.logo {
+    position: absolute;
+}
+
+.sumber {
+    z-index: 999999;
+    background-color: black;
+    position: absolute;
+    color:white;
+    text-align: center;
+    font-family:  sans-serif;
+    font-size:10px;
+    bottom:0;
+    padding:10px;
+    width:100%
+}
+
+.creditstrong {
+    font-weight: 800;
+}
+
+#map {
+    position: absolute;
+    top:0;
+    height: 819px;
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    bottom:60px;
+    font-family:'Staatliches',sans-serif;
+    font-size: 50pt;
+    z-index: 999999;
+    line-height: 1em;
+    width: 90%;
+}
+
+/*----------END MAIN STYLE----------*/
+
+.inner {
+    width: 95%;
+    height: 95%;
+    display: grid;
+    place-items: center;
+}
+
+.svgcontainer {
+    position: absolute;
+}
+
+/* AXIS */
+
+.xaxis .domain {
+    display:none;
+}
+
+.yaxis .domain {
+    display: none
+}
+
+.xaxis .tick line{
+    stroke-dasharray: 2 2;
+    color: #666666;
+    opacity: 0;
+}
+
+.yaxis .tick line {
+    color: #a8a8a8;
+    opacity:.1;
+}
+
+.yaxis .tick text{
+    color: black;
+    opacity:1;
+}
+
+/* CHART */
+
+.overlay {
+    fill: none;
+    display: null;
+    pointer-events: all;
+}
+
+/* TOOLTIP */
+.tooltip {
+    background-color:#e5e5e5;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    opacity: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.legend-total {
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.legend {
+    font-family: sans-serif;
+    position: absolute;
+    line-height: 1.5em;
+}
+
+.bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#b1 {
+    background-color: #4f7aa8;
+}
+
+#b2 {
+    background-color: #f28e29;
+}
+
+#b3 {
+    background-color: #e05759;
+}
+
+#b4 {
+    background-color:#76b7b2;
+}
+
+#b5 {
+    background-color: #59a14e;
+}
+
+#b6 {
+    background-color: #edc849;
+}
+
+
+@media (max-width:500px) { /* MOBILE */
+    
+    .container {
+        width: 360px;
+        height: 700px;
+    }
+
+    .credit {
+        right:20px;
+        top:20px;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 38px;
+        right: 0px;
+    }
+    
+    .sort-select {
+        position: absolute;
+        left: 9px;
+        top: 40px;
+        font-size: 12px;
+        width: 270px;
+    }
+
+    .sort-label {
+        font-family:  sans-serif;
+        font-size: 13px;
+        position: absolute;
+        left: 9px;
+        top:20px;
+    }
+
+    .legend {
+        font-size: 12px;
+        left: 9px;
+        top: 80px;
+    }
+
+    .svgcontainer {
+        top:200px;
+    }
+    
+    .title {
+        font-size: 40pt;
+    }
+
+} /* END --------------------------- MOBILE */
+
+@media (min-width:501px) { /* DESKTOP */
+    .container {
+        width: 560px;
+        height: 850px;
+    }
+    
+    .credit {
+        right:32px;
+        top:32px;
+    }
+    
+    .logo {
+        width: 47px;
+        height: 59px;
+        right: 0px;
+    }
+    
+    .sort-select {
+        position: absolute;
+        left: 16px;
+        top: 50px;
+        font-size: 12px;
+        width: 270px;
+    }
+
+    .sort-label {
+        font-family: sans-serif;
+        font-size: 13px;
+        position: absolute;
+        left: 16px;
+        top:32px;
+    }
+
+    .legend {
+        font-size: 12px;
+        left: 16px;
+        top: 75px;
+    }
+    
+    .svgcontainer {
+        top:200px;
+    }
+
+    
+
+} /* END ---------------------------- DESKTOP */
