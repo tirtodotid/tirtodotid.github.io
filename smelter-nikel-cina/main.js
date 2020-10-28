@@ -14,13 +14,13 @@ var mapxup, mapyup, mapxdn, mapydn, zoom, weight,
 if ( w < h ) { // MOBILE                                      //
     zoom = 4
     x = 117.5
-    y = -8.6145
+    y = -16.6145
     weight = 1
     dash = 1
     exup = '370px'
     exdn = '95px' 
     mapxup = -15.5
-    container.style.height = '700px'                          //
+    container.style.height = '560px'                          //
     container.style.width = '367px'                           //
                                                               //
 } else if ( w > h ) { // DESKTOP
