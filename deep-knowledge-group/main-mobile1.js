@@ -143,7 +143,7 @@ d3.csv(url).then(function(data) {
             } else if (a == "healthcare") {
                 b = "Kesiapan Fasilitas Kesehatan"
             } else if (a == "vulner") {
-                b = "Kerentanan Negara"
+                b = "Ketahanan Negara"
             } else if (a == "emergency") {
                 b = "Kesiapan dalam Kondisi Darurat"
             }
