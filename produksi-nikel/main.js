@@ -72,7 +72,7 @@ var svg1 = d3
 var color1 = d3
     .scaleOrdinal()
     .domain(data2014.map(d => d.company))
-    .range(d3.schemeTableau10)
+    .range(["#f28e2b", "#59a14f", "#edc948"])
 
 function arcLabel1() {
     const radius = Math.min(width, height) / 2 * 0.8;
