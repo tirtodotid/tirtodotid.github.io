@@ -249,6 +249,10 @@
     .svgcontainer {
         top:200px;
     }
+    
+    #map {
+        height: 529px;
+    }
 
     
 
