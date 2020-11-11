@@ -1,4 +1,4 @@
-var url = "/index.csv"
+var url = "index.csv"
 var lefttransform = 100
 
 var winner = $('.inner').width()

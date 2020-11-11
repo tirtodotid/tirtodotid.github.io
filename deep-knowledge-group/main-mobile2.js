@@ -1,4 +1,4 @@
-var url = "/index.csv"
+var url = "index.csv"
 
 var winner = $('.inner').width()
 var hinner = $('.inner').height()
