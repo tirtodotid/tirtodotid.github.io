@@ -132,6 +132,18 @@ d3.csv(url).then(function(data) {
             .style("stroke", "none")
         })
 
+        var line = svg
+        .append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "#444")
+        .attr("stroke-width", 3)
+        .attr("d", d3.line()
+            .curve(d3.curveNatural)
+            .x(function(d) { return x(d.ipk)+lefttransform})
+            .y(function(d) { return y(d.negara)+5})
+        )
+
         svg
         .append("g")
         .selectAll("text")
