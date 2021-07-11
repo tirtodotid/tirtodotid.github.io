@@ -63,6 +63,7 @@ detail.style.display = 'none';
 
 close.addEventListener('click', ()=> {
     detail.style.display = 'none';
+    layer.resetStyle();
 })
 
 function prevNone() {
@@ -224,7 +225,10 @@ function detailFeature(e, props) {
 
     detail.style.display='flex';
 
-    content.innerHTML = "<h2>" + layer.feature.properties.Perusahaan + "</h2><br>"
+    content.innerHTML = "<h2>" + layer.feature.properties.Perusahaan + "</h2>"
+        + "<p><b>Izin Usaha</b> : " + layer.feature.properties.izin + "<br>"
+        + "<b>Luas Area</b> : " + layer.feature.properties.luas + "</p>"
+        + "<p>" + layer.feature.properties.keterangan + "</p>"
 }
 
 function highlightFeature(e) {
@@ -242,8 +246,8 @@ function highlightFeature(e) {
     }
 }
 
-function resetHighlight(e) {
-    layer.resetStyle(e.target);
+function resetHighlight() {
+    layer.resetStyle();
 }
 
 function onEachFeature(feature, layer) {
