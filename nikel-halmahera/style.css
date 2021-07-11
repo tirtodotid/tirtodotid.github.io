@@ -91,7 +91,7 @@ hr {
     position: absolute;
     width:100%;
     height: 100%;
-    z-index: 800;
+    z-index: 1200;
     display: flex;
     place-content: center;
     place-items: center;
@@ -112,6 +112,11 @@ hr {
 .content-container {
     width:90%;
     height:90%;
+}
+
+.content>h2{
+    margin:0;
+    font-weight: 800;
 }
 
 .close-container {
@@ -135,7 +140,29 @@ hr {
 .detail-content {
 
     height: 95%;
+    overflow-y: auto;
 }
+
+.logo {
+    width: 48px;
+    height: 60px;
+}
+
+.credit-container {
+    font-family: 'Lato';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+}
+
+.source {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-right: 0.4rem;
+}
+
 
 @media (max-width:500px) {
     .navigation {
