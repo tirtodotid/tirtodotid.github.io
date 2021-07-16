@@ -14,7 +14,7 @@ var table = new Tabulator('#table', {
     layout: "fitColumns", //fit columns to width of table (optional)
     resizableColumns:false,
     columns:[ //Define Table Columns
-        {title:"Provinsi", field:"Provinsi"},
+        {title:"Provinsi", field:"Provinsi", width:90},
         {title:"Jumlah RS", field:"Jumlah RS", hozAlign:"right",formatter:"money", formatterParams:numberParam},
         {title:"Bed Kosong IGD", field:"Bed Kosong IGD",hozAlign:"right",formatter:"money", formatterParams:numberParam},
         {title:"Antrian Pasien IGD", field:"Antrian Pasien IGD",hozAlign:"right",formatter:"money", formatterParams:numberParam},
