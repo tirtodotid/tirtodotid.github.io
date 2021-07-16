@@ -1,0 +1,66 @@
+var tabledata =[
+	{
+	  "Provinsi": "DKI Jakarta",
+	  "Jumlah RS": 135,
+	  "Bed Kosong IGD": 47,
+	  "Antrian Pasien IGD": 873,
+	  "Kasus Baru Covid-19": 12667,
+	  "Kasus Meninggal": 63
+	},
+	{
+	  "Provinsi": "Jawa Barat",
+	  "Jumlah RS": 238,
+	  "Bed Kosong IGD": 177,
+	  "Antrian Pasien IGD": 539,
+	  "Kasus Baru Covid-19": 10444,
+	  "Kasus Meninggal": 142
+	},
+	{
+	  "Provinsi": "Jawa Timur",
+	  "Jumlah RS": 216,
+	  "Bed Kosong IGD": 83,
+	  "Antrian Pasien IGD": 747,
+	  "Kasus Baru Covid-19": 7088,
+	  "Kasus Meninggal": 234
+	},
+	{
+	  "Provinsi": "Banten",
+	  "Jumlah RS": 81,
+	  "Bed Kosong IGD": 25,
+	  "Antrian Pasien IGD": 542,
+	  "Kasus Baru Covid-19": 3889,
+	  "Kasus Meninggal": 21
+	},
+	{
+	  "Provinsi": "Jawa Tengah",
+	  "Jumlah RS": 238,
+	  "Bed Kosong IGD": 307,
+	  "Antrian Pasien IGD": 436,
+	  "Kasus Baru Covid-19": 5110,
+	  "Kasus Meninggal": 237
+	},
+	{
+	  "Provinsi": "D I Yogyakarta",
+	  "Jumlah RS": 51,
+	  "Bed Kosong IGD": 12,
+	  "Antrian Pasien IGD": 59,
+	  "Kasus Baru Covid-19": 2350,
+	  "Kasus Meninggal": 65
+	},
+	{
+	  "Provinsi": "Kalimantan Timur",
+	  "Jumlah RS": 21,
+	  "Bed Kosong IGD": 16,
+	  "Antrian Pasien IGD": 47,
+	  "Kasus Baru Covid-19": 1658,
+	  "Kasus Meninggal": 43
+	},
+	{
+	  "Provinsi": "Lampung",
+	  "Jumlah RS": 37,
+	  "Bed Kosong IGD": 29,
+	  "Antrian Pasien IGD": 85,
+	  "Kasus Baru Covid-19": 320,
+	  "Kasus Meninggal": 0
+	}
+  ]
