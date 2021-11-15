@@ -1,14 +1,27 @@
 var $slide = $('.slide-tahun');
 var $tahun  = $('.tahun');
 var val = $slide.val();
-var url1 = "img/peta-curah-hujan-pulau-rinca-png-sequence00";
-var url2 = "img/peta-curah-hujan-pulau-rinca-png-sequence0";
+var url1 = "/img/peta-curah-hujan-pulau-rinca-png-sequence00";
+var url2 = "/img/peta-curah-hujan-pulau-rinca-png-sequence0";
 var sub = document.getElementsByClassName('subsiden');
 var $play = $('.play');
 var $prev = $('.prev');
 var $next = $('.next');
 
 var count = 0;
+
+var screenwidth = screen.width
+console.log(screenwidth)
+
+if (screenwidth < 370) {
+    widthcalc = 367
+    topbutton = 78
+    topslider = 86
+} else if (screenwidth > 370) {
+    widthcalc = 560
+    topbutton = 85
+    topslider = 94
+}
 
 play();
 
@@ -96,8 +109,8 @@ svg
     .append('line')
     .attr('x1', i => i * mul +39)
     .attr('x2', i => i * mul +39)
-    .attr('y1', 93/100 * height - 1 )
-    .attr('y2', 93/100 * height + 20 )
+    .attr('y1', topslider/100 * height - 1 )
+    .attr('y2', topslider/100 * height + 10 )
     .style('stroke', 'black')
     .style('stroke-width', 2)
     .style('stroke-linecap', 'round');
