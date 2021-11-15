@@ -1,10 +1,7 @@
-body {
-    background-color: #555555;
-}
-
 .container {
     width: 560px;
     height: 560px;
+    background-color: white;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -168,7 +165,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 370px) {
     .container {
         width:100%;
     }
@@ -183,5 +180,21 @@ body {
 
     .jakarta-over {
         width: 100%;
+    }
+
+    .slide-tahun {
+        top: 86%;
+    }
+
+    .play {
+        top: 78%;
+    }
+    
+    .prev {
+        top: 78%;
+    }
+    
+    .next {
+        top: 78%;
     }
 }
