@@ -1,7 +1,7 @@
 .container {
     width: 560px;
     height: 560px;
-    background-color: white;
+    background-color: #555555;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
