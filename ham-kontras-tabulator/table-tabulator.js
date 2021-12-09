@@ -20,7 +20,7 @@ document.getElementById("filter-periode").addEventListener("keyup", updateFilter
 document.getElementById("filter-kasus").addEventListener("keyup", updateFilter);
 
 var table = new Tabulator('#table', {
-    height:400, //set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
+    height:300, //set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
     data:tabledata, //assign set of data
     layout: "fitColumns", //fit columns to width of table (optional)
     columns:[ //Define Table Columns
